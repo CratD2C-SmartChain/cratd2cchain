@@ -31,7 +31,7 @@ import (
 )
 
 const (
-	ipcAPIs  = "XDCx:1.0 XDCxlending:1.0 CratD2C:1.0 admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0"
+	ipcAPIs  = "DCx:1.0 DCxlending:1.0 CratD2C:1.0 admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0"
 	httpAPIs = "eth:1.0 net:1.0 rpc:1.0 web3:1.0"
 )
 
@@ -42,7 +42,7 @@ func TestConsoleWelcome(t *testing.T) {
 
 	// Start a XDC console, make sure it's cleaned up and terminate the console
 	XDC := runXDC(t,
-		"--XDCx.datadir", tmpdir(t)+"XDCx/"+time.Now().String(),
+		"--DCx.datadir", tmpdir(t)+"DCx/"+time.Now().String(),
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase,
 		"console")
@@ -85,7 +85,7 @@ func TestIPCAttachWelcome(t *testing.T) {
 		ipc = filepath.Join(ws, "XDC.ipc")
 	}
 	XDC := runXDC(t,
-		"--XDCx.datadir", tmpdir(t)+"XDCx/"+time.Now().String(),
+		"--DCx.datadir", tmpdir(t)+"DCx/"+time.Now().String(),
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--ipcpath", ipc)
 
@@ -100,7 +100,7 @@ func TestHTTPAttachWelcome(t *testing.T) {
 	coinbase := "0x8605cdbbdb6d264aa742e77020dcbc58fcdce182"
 	port := strconv.Itoa(trulyRandInt(1024, 65536)) // Yeah, sometimes this will fail, sorry :P
 	XDC := runXDC(t,
-		"--XDCx.datadir", tmpdir(t)+"XDCx/"+time.Now().String(),
+		"--DCx.datadir", tmpdir(t)+"DCx/"+time.Now().String(),
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--rpc", "--rpcport", port)
 
@@ -116,7 +116,7 @@ func TestWSAttachWelcome(t *testing.T) {
 	port := strconv.Itoa(trulyRandInt(1024, 65536)) // Yeah, sometimes this will fail, sorry :P
 
 	XDC := runXDC(t,
-		"--XDCx.datadir", tmpdir(t)+"XDCx/"+time.Now().String(),
+		"--DCx.datadir", tmpdir(t)+"DCx/"+time.Now().String(),
 		"--port", "0", "--maxpeers", "0", "--nodiscover", "--nat", "none",
 		"--etherbase", coinbase, "--ws", "--wsport", port)
 

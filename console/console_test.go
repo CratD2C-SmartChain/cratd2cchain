@@ -19,8 +19,8 @@ package console
 import (
 	"bytes"
 	"errors"
-	"github.com/XinFinOrg/XDC-Subnet/XDCx"
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/DCx"
+	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
 	"io/ioutil"
 	"os"
 	"strings"
@@ -107,7 +107,7 @@ func newTester(t *testing.T, confOverride func(*eth.Config)) *tester {
 		confOverride(ethConf)
 	}
 	if err = stack.Register(func(ctx *node.ServiceContext) (node.Service, error) {
-		return eth.New(ctx, ethConf, &XDCx.XDCX{}, &XDCxlending.Lending{})
+		return eth.New(ctx, ethConf, &DCx.XDCX{}, &DCxlending.Lending{})
 	}); err != nil {
 		t.Fatalf("failed to register Ethereum protocol: %v", err)
 	}

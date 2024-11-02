@@ -23,7 +23,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
 	"github.com/XinFinOrg/XDC-Subnet/params"
 

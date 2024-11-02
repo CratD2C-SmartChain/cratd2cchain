@@ -1,7 +1,7 @@
 package vm
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/log"
 	"github.com/XinFinOrg/XDC-Subnet/params"
@@ -9,7 +9,7 @@ import (
 
 const XDCXPriceNumberOfBytesReturn = 32
 
-// XDCxPrice implements a pre-compile contract to get token price in XDCx
+// XDCxPrice implements a pre-compile contract to get token price in DCx
 
 type XDCxLastPrice struct {
 	tradingStateDB *tradingstate.TradingStateDB

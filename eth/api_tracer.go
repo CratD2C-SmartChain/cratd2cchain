@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"

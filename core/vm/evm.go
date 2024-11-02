@@ -22,7 +22,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/params"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"

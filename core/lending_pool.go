@@ -26,7 +26,7 @@ import (
 
 	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/consensus"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -521,7 +521,7 @@ func (pool *LendingPool) validateBalance(cloneStateDb *state.StateDB, cloneLendi
 	XDCXServ := XDPoSEngine.GetXDCXService()
 	lendingServ := XDPoSEngine.GetLendingService()
 	if XDCXServ == nil {
-		return fmt.Errorf("XDCx not found in order validation")
+		return fmt.Errorf("DCx not found in order validation")
 	}
 	lendingTokenDecimal, err := XDCXServ.GetTokenDecimal(pool.chain, cloneStateDb, tx.LendingToken())
 	if err != nil {

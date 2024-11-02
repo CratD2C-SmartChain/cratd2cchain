@@ -29,7 +29,7 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx"
+	"github.com/XinFinOrg/XDC-Subnet/DCx"
 	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/eth"
@@ -94,7 +94,7 @@ type XDCConfig struct {
 	Shh         whisper.Config
 	Node        node.Config
 	Ethstats    ethstatsConfig
-	XDCX        XDCx.Config
+	XDCX        DCx.Config
 	Account     account
 	StakeEnable bool
 	Bootnodes   Bootnodes
@@ -131,7 +131,7 @@ func makeConfigNode(ctx *cli.Context) (*node.Node, XDCConfig) {
 	cfg := XDCConfig{
 		Eth:         eth.DefaultConfig,
 		Shh:         whisper.DefaultConfig,
-		XDCX:        XDCx.DefaultConfig,
+		XDCX:        DCx.DefaultConfig,
 		Node:        defaultNodeConfig(),
 		StakeEnable: true,
 		Verbosity:   3,

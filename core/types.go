@@ -19,8 +19,8 @@ package core
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/core/state"
 	"github.com/XinFinOrg/XDC-Subnet/core/types"

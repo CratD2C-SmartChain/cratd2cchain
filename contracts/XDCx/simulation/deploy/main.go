@@ -50,8 +50,8 @@ func main() {
 	}
 	XDCxListing.TransactOpts.GasPrice = big.NewInt(250000000000000)
 
-	fmt.Println("===> XDCx listing address", XDCxListtingAddr.Hex())
-	fmt.Println("wait 10s to execute init smart contract : XDCx listing ")
+	fmt.Println("===> DCx listing address", XDCxListtingAddr.Hex())
+	fmt.Println("wait 10s to execute init smart contract : DCx listing ")
 	time.Sleep(2 * time.Second)
 
 	// init Relayer Registration
@@ -235,7 +235,7 @@ func main() {
 	if err != nil {
 		log.Fatal("relayerRegistration Register ", err)
 	}
-	fmt.Println("wait 2s to apply token to list XDCx")
+	fmt.Println("wait 2s to apply token to list DCx")
 	time.Sleep(2 * time.Second)
 
 	// Lending apply

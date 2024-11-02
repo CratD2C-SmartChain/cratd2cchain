@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/consensus"
 	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
 
@@ -469,7 +469,7 @@ func (pool *OrderPool) validateOrder(tx *types.OrderTransaction) error {
 			}
 			XDCXServ := XDPoSEngine.GetXDCXService()
 			if XDCXServ == nil {
-				return fmt.Errorf("XDCx not found in order validation")
+				return fmt.Errorf("DCx not found in order validation")
 			}
 			baseDecimal, err := XDCXServ.GetTokenDecimal(pool.chain, cloneStateDb, tx.BaseToken())
 			if err != nil {

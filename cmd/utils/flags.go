@@ -28,7 +28,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx"
+	"github.com/XinFinOrg/XDC-Subnet/DCx"
 	"github.com/XinFinOrg/XDC-Subnet/accounts"
 	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -203,7 +203,7 @@ var (
 	}
 	// XDCX settings
 	XDCXEnabledFlag = cli.BoolFlag{
-		Name:  "XDCx",
+		Name:  "DCx",
 		Usage: "Enable the XDCX protocol",
 	}
 	// Ethash settings
@@ -544,27 +544,27 @@ var (
 		Value: whisper.DefaultMinimumPoW,
 	}
 	XDCXDataDirFlag = DirectoryFlag{
-		Name:  "XDCx.datadir",
+		Name:  "DCx.datadir",
 		Usage: "Data directory for the XDCX databases",
-		Value: DirectoryString{filepath.Join(DataDirFlag.Value.String(), "XDCx")},
+		Value: DirectoryString{filepath.Join(DataDirFlag.Value.String(), "DCx")},
 	}
 	XDCXDBEngineFlag = cli.StringFlag{
-		Name:  "XDCx.dbengine",
+		Name:  "DCx.dbengine",
 		Usage: "Database engine for XDCX (leveldb, mongodb)",
 		Value: "leveldb",
 	}
 	XDCXDBNameFlag = cli.StringFlag{
-		Name:  "XDCx.dbName",
+		Name:  "DCx.dbName",
 		Usage: "Database name for XDCX",
 		Value: "XDCdex",
 	}
 	XDCXDBConnectionUrlFlag = cli.StringFlag{
-		Name:  "XDCx.dbConnectionUrl",
+		Name:  "DCx.dbConnectionUrl",
 		Usage: "ConnectionUrl to database if dbEngine is mongodb. Host:port. If there are multiple instances, separated by comma. Eg: localhost:27017,localhost:27018",
 		Value: "localhost:27017",
 	}
 	XDCXDBReplicaSetNameFlag = cli.StringFlag{
-		Name:  "XDCx.dbReplicaSetName",
+		Name:  "DCx.dbReplicaSetName",
 		Usage: "ReplicaSetName if Master-Slave is setup",
 	}
 	XDCSlaveModeFlag = cli.BoolFlag{
@@ -1046,12 +1046,12 @@ func SetShhConfig(ctx *cli.Context, stack *node.Node, cfg *whisper.Config) {
 	}
 }
 
-func SetXDCXConfig(ctx *cli.Context, cfg *XDCx.Config, XDCDataDir string) {
+func SetXDCXConfig(ctx *cli.Context, cfg *DCx.Config, XDCDataDir string) {
 	if ctx.GlobalIsSet(XDCXDataDirFlag.Name) {
 		cfg.DataDir = ctx.GlobalString(XDCXDataDirFlag.Name)
 	} else {
-		// default XDCx datadir: DATADIR/XDCx
-		defaultXDCXDataDir := filepath.Join(XDCDataDir, "XDCx")
+		// default DCx datadir: DATADIR/DCx
+		defaultXDCXDataDir := filepath.Join(XDCDataDir, "DCx")
 
 		filesInXDCXDefaultDir, _ := WalkMatch(defaultXDCXDataDir, "*.ldb")
 		filesInNodeDefaultDir, _ := WalkMatch(node.DefaultDataDir(), "*.ldb")

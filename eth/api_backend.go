@@ -25,11 +25,11 @@ import (
 	"math/big"
 	"path/filepath"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
 	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx"
+	"github.com/XinFinOrg/XDC-Subnet/DCx"
 
 	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
 
@@ -460,13 +460,13 @@ func (b *EthApiBackend) GetOrderNonce(address common.Hash) (uint64, error) {
 		}
 		return XDCxState.GetNonce(address), nil
 	}
-	return 0, errors.New("cannot find XDCx service")
+	return 0, errors.New("cannot find DCx service")
 }
 
-func (b *EthApiBackend) XDCxService() *XDCx.XDCX {
+func (b *EthApiBackend) XDCxService() *DCx.XDCX {
 	return b.eth.XDCX
 }
 
-func (b *EthApiBackend) LendingService() *XDCxlending.Lending {
+func (b *EthApiBackend) LendingService() *DCxlending.Lending {
 	return b.eth.Lending
 }

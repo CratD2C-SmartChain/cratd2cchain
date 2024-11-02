@@ -24,7 +24,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/log"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
