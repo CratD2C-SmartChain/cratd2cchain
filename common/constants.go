@@ -46,7 +46,7 @@ var IsTestnet bool = false
 var StoreRewardFolder string
 var RollbackHash Hash
 var BasePrice = big.NewInt(1000000000000000000)                       // 1
-var RelayerLockedFund = big.NewInt(20000)                             // 20000 XDC
+var RelayerLockedFund = big.NewInt(20000)                             // 20000 CRAT
 var RelayerFee = big.NewInt(1000000000000000)                         // 0.001
 var XDCXBaseFee = big.NewInt(10000)                                   // 1 / XDCXBaseFee
 var RelayerCancelFee = big.NewInt(100000000000000)                    // 0.0001

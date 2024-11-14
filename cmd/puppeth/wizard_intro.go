@@ -48,7 +48,7 @@ func makeWizard(options flagOptions) *wizard {
 func (w *wizard) run() {
 	fmt.Println("+-----------------------------------------------------------+")
 	fmt.Println("| Welcome to puppeth, your Ethereum private network manager |")
-	fmt.Println("| This is a modified version for the purposes of XDC-Subnet |")
+	fmt.Println("| This is a modified version for the purposes of CRAT-Subnet |")
 	fmt.Println("| genesis generation.                                       |")
 	fmt.Println("+-----------------------------------------------------------+")
 	fmt.Println()

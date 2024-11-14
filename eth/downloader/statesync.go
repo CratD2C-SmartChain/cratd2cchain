@@ -237,7 +237,7 @@ type stateTask struct {
 
 // newStateSync creates a new state trie download scheduler. This method does not
 // yet start the sync. The user needs to call run to initiate.
-// only use fast sync but XDC only run full sync
+// only use fast sync but CRAT only run full sync
 func newStateSync(d *Downloader, root common.Hash) *stateSync {
 	return &stateSync{
 		d:       d,

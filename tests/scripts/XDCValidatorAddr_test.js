@@ -1,5 +1,5 @@
 // Sample Comment
-// root:/work# XDC attach --jspath ./ --exec 'loadScript("XDCValidatorAddr_test.js")'  http://localhost:8545
+// root:/work# CRAT attach --jspath ./ --exec 'loadScript("XDCValidatorAddr_test.js")'  http://localhost:8545
 // getGrandMasters has 3
 // true
 

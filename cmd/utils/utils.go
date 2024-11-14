@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/DCx"
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
 	"github.com/XinFinOrg/XDC-Subnet/eth"
 	"github.com/XinFinOrg/XDC-Subnet/eth/downloader"
 	"github.com/XinFinOrg/XDC-Subnet/ethstats"
@@ -20,9 +20,9 @@ func RegisterEthService(stack *node.Node, cfg *eth.Config) {
 		})
 	} else {
 		err = stack.Register(func(ctx *node.ServiceContext) (node.Service, error) {
-			var XDCXServ *DCx.XDCX
+			var XDCXServ *XDCx.XDCX
 			ctx.Service(&XDCXServ)
-			var lendingServ *DCxlending.Lending
+			var lendingServ *XDCxlending.Lending
 			ctx.Service(&lendingServ)
 			fullNode, err := eth.New(ctx, cfg, XDCXServ, lendingServ)
 			if fullNode != nil && cfg.LightServ > 0 {
@@ -63,17 +63,17 @@ func RegisterEthStatsService(stack *node.Node, url string) {
 	}
 }
 
-func RegisterXDCXService(stack *node.Node, cfg *DCx.Config) {
-	XDCX := DCx.New(cfg)
+func RegisterXDCXService(stack *node.Node, cfg *XDCx.Config) {
+	XDCX := XDCx.New(cfg)
 	if err := stack.Register(func(n *node.ServiceContext) (node.Service, error) {
 		return XDCX, nil
 	}); err != nil {
 		Fatalf("Failed to register the XDCX service: %v", err)
 	}
 
-	// register DCxlending service
+	// register XDCxlending service
 	if err := stack.Register(func(n *node.ServiceContext) (node.Service, error) {
-		return DCxlending.New(XDCX), nil
+		return XDCxlending.New(XDCX), nil
 	}); err != nil {
 		Fatalf("Failed to register the XDCXLending service: %v", err)
 	}

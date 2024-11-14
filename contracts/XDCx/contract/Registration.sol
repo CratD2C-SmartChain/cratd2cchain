@@ -126,7 +126,7 @@ contract RelayerRegistration {
         require(RESIGN_REQUESTS[coinbase] == 0, "The relayer has been requested to close.");
         require(ActiveRelayerCount < MaximumRelayers, "Maximum relayers registered");
 
-        // check valid tokens, token must pair with XDC(x/XDC)
+        // check valid tokens, token must pair with CRAT(x/CRAT)
         require(validateTokens(fromTokens, toTokens) == true, "Invalid quote tokens");
 
         RELAYER_COINBASES[RelayerCount] = coinbase;
@@ -375,7 +375,7 @@ contract RelayerRegistration {
             return true;
         }
 
-        // get tokens that paired with XDC
+        // get tokens that paired with CRAT
         for (uint i = 0; i < RELAYER_LIST[coinbase]._toTokens.length; i++) {
             if (RELAYER_LIST[coinbase]._toTokens[i] == XDCNative) {
                 XDCPairs[countPair] = RELAYER_LIST[coinbase]._fromTokens[i];

@@ -19,8 +19,8 @@ package core
 import (
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/consensus"
 	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
@@ -113,7 +113,7 @@ func (v *BlockValidator) ValidateTradingOrder(statedb *state.StateDB, XDCxStated
 	}
 	XDCXService := XDPoSEngine.GetXDCXService()
 	if XDCXService == nil {
-		return fmt.Errorf("DCx not found")
+		return fmt.Errorf("XDCx not found")
 	}
 	log.Debug("verify matching transaction found a TxMatches Batch", "numTxMatches", len(txMatchBatch.Data))
 	tradingResult := map[common.Hash]tradingstate.MatchingResult{}
@@ -149,7 +149,7 @@ func (v *BlockValidator) ValidateLendingOrder(statedb *state.StateDB, lendingSta
 	}
 	XDCXService := XDPoSEngine.GetXDCXService()
 	if XDCXService == nil {
-		return fmt.Errorf("DCx not found")
+		return fmt.Errorf("XDCx not found")
 	}
 	lendingService := XDPoSEngine.GetLendingService()
 	if lendingService == nil {

@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/core/state"
 	"math/big"
 	"os"

@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx"
 	"github.com/XinFinOrg/XDC-Subnet/accounts"
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/consensus"
@@ -43,10 +43,10 @@ type Backend interface {
 	BlockChain() *core.BlockChain
 	TxPool() *core.TxPool
 	ChainDb() ethdb.Database
-	GetXDCX() *DCx.XDCX
+	GetXDCX() *XDCx.XDCX
 	OrderPool() *core.OrderPool
 	LendingPool() *core.LendingPool
-	GetXDCXLending() *DCxlending.Lending
+	GetXDCXLending() *XDCxlending.Lending
 }
 
 // Miner creates blocks and searches for proof-of-work values.

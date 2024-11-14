@@ -10,10 +10,10 @@ GO_FILES := $(shell find $(shell go list -f '{{.Dir}}' $(GO_PACKAGES)) -name \*.
 
 GIT = git
 
-XDC:
-	go run build/ci.go install ./cmd/XDC
+CRAT:
+	go run build/ci.go install ./cmd/CRAT
 	@echo "Done building."
-	@echo "Run \"$(GOBIN)/XDC\" to launch XDC."
+	@echo "Run \"$(GOBIN)/CRAT\" to launch CRAT."
 
 gc:
 	go run build/ci.go install ./cmd/gc

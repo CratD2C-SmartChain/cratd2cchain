@@ -51,7 +51,7 @@ contract XDCValidator {
     mapping(address => bool) public grandMasterMap;
 
     modifier onlyValidCandidateCap() {
-        // anyone can deposit X XDC to become a candidate
+        // anyone can deposit X CRAT to become a candidate
         require(msg.value >= minCandidateCap, "Low Candidate Cap");
         _;
     }

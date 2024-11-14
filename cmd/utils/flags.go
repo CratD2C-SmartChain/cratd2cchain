@@ -28,7 +28,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx"
 	"github.com/XinFinOrg/XDC-Subnet/accounts"
 	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -110,7 +110,7 @@ func NewApp(gitCommit, usage string) *cli.App {
 // are the same for all commands.
 
 var (
-	// XDC flags.
+	// CRAT flags.
 	RollbackFlag = cli.StringFlag{
 		Name:  "rollback",
 		Usage: "Rollback chain at hash",
@@ -149,7 +149,7 @@ var (
 	}
 	XDCTestnetFlag = cli.BoolFlag{
 		Name:  "apothem",
-		Usage: "XDC Apothem Network",
+		Usage: "CRAT Apothem Network",
 	}
 	DeveloperFlag = cli.BoolFlag{
 		Name:  "dev",
@@ -203,7 +203,7 @@ var (
 	}
 	// XDCX settings
 	XDCXEnabledFlag = cli.BoolFlag{
-		Name:  "DCx",
+		Name:  "XDCx",
 		Usage: "Enable the XDCX protocol",
 	}
 	// Ethash settings
@@ -544,27 +544,27 @@ var (
 		Value: whisper.DefaultMinimumPoW,
 	}
 	XDCXDataDirFlag = DirectoryFlag{
-		Name:  "DCx.datadir",
+		Name:  "XDCx.datadir",
 		Usage: "Data directory for the XDCX databases",
-		Value: DirectoryString{filepath.Join(DataDirFlag.Value.String(), "DCx")},
+		Value: DirectoryString{filepath.Join(DataDirFlag.Value.String(), "XDCx")},
 	}
 	XDCXDBEngineFlag = cli.StringFlag{
-		Name:  "DCx.dbengine",
+		Name:  "XDCx.dbengine",
 		Usage: "Database engine for XDCX (leveldb, mongodb)",
 		Value: "leveldb",
 	}
 	XDCXDBNameFlag = cli.StringFlag{
-		Name:  "DCx.dbName",
+		Name:  "XDCx.dbName",
 		Usage: "Database name for XDCX",
 		Value: "XDCdex",
 	}
 	XDCXDBConnectionUrlFlag = cli.StringFlag{
-		Name:  "DCx.dbConnectionUrl",
+		Name:  "XDCx.dbConnectionUrl",
 		Usage: "ConnectionUrl to database if dbEngine is mongodb. Host:port. If there are multiple instances, separated by comma. Eg: localhost:27017,localhost:27018",
 		Value: "localhost:27017",
 	}
 	XDCXDBReplicaSetNameFlag = cli.StringFlag{
-		Name:  "DCx.dbReplicaSetName",
+		Name:  "XDCx.dbReplicaSetName",
 		Usage: "ReplicaSetName if Master-Slave is setup",
 	}
 	XDCSlaveModeFlag = cli.BoolFlag{
@@ -765,7 +765,7 @@ func setIPC(ctx *cli.Context, cfg *node.Config) {
 }
 
 // MakeDatabaseHandles raises out the number of allowed file handles per process
-// for XDC and returns half of the allowance to assign to the database.
+// for CRAT and returns half of the allowance to assign to the database.
 func MakeDatabaseHandles() int {
 	limit, err := fdlimit.Current()
 	if err != nil {
@@ -797,7 +797,7 @@ func MakeAddress(ks *keystore.KeyStore, account string) (accounts.Account, error
 	log.Warn("-------------------------------------------------------------------")
 	log.Warn("Referring to accounts by order in the keystore folder is dangerous!")
 	log.Warn("This functionality is deprecated and will be removed in the future!")
-	log.Warn("Please use explicit addresses! (can search via `XDC account list`)")
+	log.Warn("Please use explicit addresses! (can search via `CRAT account list`)")
 	log.Warn("-------------------------------------------------------------------")
 
 	accs := ks.Accounts()
@@ -1046,12 +1046,12 @@ func SetShhConfig(ctx *cli.Context, stack *node.Node, cfg *whisper.Config) {
 	}
 }
 
-func SetXDCXConfig(ctx *cli.Context, cfg *DCx.Config, XDCDataDir string) {
+func SetXDCXConfig(ctx *cli.Context, cfg *XDCx.Config, XDCDataDir string) {
 	if ctx.GlobalIsSet(XDCXDataDirFlag.Name) {
 		cfg.DataDir = ctx.GlobalString(XDCXDataDirFlag.Name)
 	} else {
-		// default DCx datadir: DATADIR/DCx
-		defaultXDCXDataDir := filepath.Join(XDCDataDir, "DCx")
+		// default XDCx datadir: DATADIR/XDCx
+		defaultXDCXDataDir := filepath.Join(XDCDataDir, "XDCx")
 
 		filesInXDCXDefaultDir, _ := WalkMatch(defaultXDCXDataDir, "*.ldb")
 		filesInNodeDefaultDir, _ := WalkMatch(node.DefaultDataDir(), "*.ldb")
@@ -1143,7 +1143,7 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *eth.Config) {
 		cfg.EnablePreimageRecording = ctx.GlobalBool(VMEnableDebugFlag.Name)
 	}
 	if ctx.GlobalIsSet(StoreRewardFlag.Name) {
-		common.StoreRewardFolder = filepath.Join(stack.DataDir(), "XDC", "rewards")
+		common.StoreRewardFolder = filepath.Join(stack.DataDir(), "CRAT", "rewards")
 		if _, err := os.Stat(common.StoreRewardFolder); os.IsNotExist(err) {
 			os.Mkdir(common.StoreRewardFolder, os.ModePerm)
 		}
@@ -1282,11 +1282,11 @@ func MakeConsolePreloads(ctx *cli.Context) []string {
 // This is a temporary function used for migrating old command/flags to the
 // new format.
 //
-// e.g. XDC account new --keystore /tmp/mykeystore --lightkdf
+// e.g. CRAT account new --keystore /tmp/mykeystore --lightkdf
 //
 // is equivalent after calling this method with:
 //
-// XDC --keystore /tmp/mykeystore --lightkdf account new
+// CRAT --keystore /tmp/mykeystore --lightkdf account new
 //
 // This allows the use of the existing configuration functionality.
 // When all flags are migrated this function can be removed and the existing

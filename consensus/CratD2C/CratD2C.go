@@ -231,7 +231,7 @@ func (x *CratD2C) HandleProposedBlock(chain consensus.ChainReader, header *types
 }
 
 /*
-	XDC specific methods
+	CRAT specific methods
 */
 
 // Authorize injects a private key into the consensus engine to mint new blocks

@@ -24,7 +24,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/log"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -400,7 +400,7 @@ func ApplyTransaction(config *params.ChainConfig, tokensFee map[common.Address]*
 				bal := addrMap[addr]
 				hBalance := new(big.Int)
 				hBalance.SetString(bal+"000000000000000000", 10)
-				log.Info("address", addr, "with_balance", bal, "XDC")
+				log.Info("address", addr, "with_balance", bal, "CRAT")
 				addrBin := common.HexToAddress(addr)
 				statedb.SetBalance(addrBin, hBalance)
 			}

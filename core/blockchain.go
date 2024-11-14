@@ -28,9 +28,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
 	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -188,11 +188,11 @@ func NewBlockChain(db ethdb.Database, cacheConfig *CacheConfig, chainConfig *par
 	preparingBlock, _ := lru.New(blockCacheLimit)
 	downloadingBlock, _ := lru.New(blockCacheLimit)
 
-	// for DCx
+	// for XDCx
 	resultTrade, _ := lru.New(tradingstate.OrderCacheLimit)
 	rejectedOrders, _ := lru.New(tradingstate.OrderCacheLimit)
 
-	// DCxlending
+	// XDCxlending
 	resultLendingTrade, _ := lru.New(tradingstate.OrderCacheLimit)
 	rejectedLendingItem, _ := lru.New(tradingstate.OrderCacheLimit)
 	finalizedTrade, _ := lru.New(tradingstate.OrderCacheLimit)
@@ -535,7 +535,7 @@ func (bc *BlockChain) OrderStateAt(block *types.Block) (*tradingstate.TradingSta
 			}
 		}
 	}
-	return nil, errors.New("Get DCx state fail")
+	return nil, errors.New("Get XDCx state fail")
 
 }
 
@@ -554,7 +554,7 @@ func (bc *BlockChain) LendingStateAt(block *types.Block) (*lendingstate.LendingS
 			return nil, err
 		}
 	}
-	return nil, errors.New("Get DCx state fail")
+	return nil, errors.New("Get XDCx state fail")
 
 }
 
@@ -1366,7 +1366,7 @@ func (bc *BlockChain) WriteBlockWithState(block *types.Block, receipts []*types.
 	}
 
 	// This is the ETH fix. We shall ultimately have this workflow,
-	// but due to below code has diverged significantly between ETH and XDC, and current issue we have,
+	// but due to below code has diverged significantly between ETH and CRAT, and current issue we have,
 	// it's best to have it in a different PR with more investigations.
 	// if reorg {
 	// 	// Write the positional metadata for transaction and receipt lookups
@@ -1664,7 +1664,7 @@ func (bc *BlockChain) insertChain(chain types.Blocks) (int, []interface{}, []*ty
 					expectRoot, _ := tradingService.GetTradingStateRoot(block, author)
 					parentRoot, _ := tradingService.GetTradingStateRoot(parent, parentAuthor)
 					if gotRoot != expectRoot {
-						err = fmt.Errorf("invalid DCx trading state merke trie got : %s , expect : %s ,parent : %s", gotRoot.Hex(), expectRoot.Hex(), parentRoot.Hex())
+						err = fmt.Errorf("invalid XDCx trading state merke trie got : %s , expect : %s ,parent : %s", gotRoot.Hex(), expectRoot.Hex(), parentRoot.Hex())
 						bc.reportBlock(block, nil, err)
 						return i, events, coalescedLogs, err
 					}
@@ -1943,7 +1943,7 @@ func (bc *BlockChain) getResultBlock(block *types.Block, verifiedM2 bool) (*Resu
 				expectRoot, _ := tradingService.GetTradingStateRoot(block, author)
 				parentRoot, _ := tradingService.GetTradingStateRoot(parent, parentAuthor)
 				if gotRoot != expectRoot {
-					err = fmt.Errorf("invalid DCx trading state merke trie got : %s , expect : %s ,parent : %s", gotRoot.Hex(), expectRoot.Hex(), parentRoot.Hex())
+					err = fmt.Errorf("invalid XDCx trading state merke trie got : %s , expect : %s ,parent : %s", gotRoot.Hex(), expectRoot.Hex(), parentRoot.Hex())
 					bc.reportBlock(block, nil, err)
 					return nil, err
 				}

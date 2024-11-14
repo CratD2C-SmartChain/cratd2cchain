@@ -22,7 +22,7 @@ const (
 
 // locationTrims are trimmed for display to avoid unwieldy log lines.
 var locationTrims = []string{
-	"github.com/XinFinOrg/XDC-Subnet/",
+	"github.com/XinFinOrg/CRAT-Subnet/",
 }
 
 // PrintOrigins sets or unsets log location (file:line) printing for terminal

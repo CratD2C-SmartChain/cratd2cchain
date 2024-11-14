@@ -21,7 +21,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/accounts"
 
 	"math/big"
@@ -29,7 +29,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/consensus"
@@ -468,7 +468,7 @@ func (self *worker) makeCurrent(parent *types.Block, header *types.Header) error
 		XDCX := self.eth.GetXDCX()
 		XDCxState, err = XDCX.GetTradingState(parent, author)
 		if err != nil {
-			log.Error("Failed to get DCx state ", "number", parent.Number(), "err", err)
+			log.Error("Failed to get XDCx state ", "number", parent.Number(), "err", err)
 			return err
 		}
 		lending := self.eth.GetXDCXLending()

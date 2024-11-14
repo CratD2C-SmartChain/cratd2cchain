@@ -29,8 +29,8 @@ see https://github.com/XinFinOrg/XDC-Subnet/issues/2040
 Usage:
 
 import (
- "github.com/XinFinOrg/XDC-Subnet/common/httpclient"
- "github.com/XinFinOrg/XDC-Subnet/swarm/api/http"
+ "github.com/XinFinOrg/CRAT-Subnet/common/httpclient"
+ "github.com/XinFinOrg/CRAT-Subnet/swarm/api/http"
 )
 client := httpclient.New()
 // for (private) swarm proxy running locally

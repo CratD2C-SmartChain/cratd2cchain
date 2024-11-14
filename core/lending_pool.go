@@ -26,7 +26,7 @@ import (
 
 	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/consensus"
 
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -521,7 +521,7 @@ func (pool *LendingPool) validateBalance(cloneStateDb *state.StateDB, cloneLendi
 	XDCXServ := XDPoSEngine.GetXDCXService()
 	lendingServ := XDPoSEngine.GetLendingService()
 	if XDCXServ == nil {
-		return fmt.Errorf("DCx not found in order validation")
+		return fmt.Errorf("XDCx not found in order validation")
 	}
 	lendingTokenDecimal, err := XDCXServ.GetTokenDecimal(pool.chain, cloneStateDb, tx.LendingToken())
 	if err != nil {
@@ -539,7 +539,7 @@ func (pool *LendingPool) validateBalance(cloneStateDb *state.StateDB, cloneLendi
 	// collateralPrice: price of collateral by LendingToken
 	// Eg: LendingToken: USD, CollateralToken: BTC
 	// collateralPrice = BTC/USD (eg: 8000 USD)
-	// lendTokenXDCPrice: price of lendingToken in XDC quote
+	// lendTokenXDCPrice: price of lendingToken in CRAT quote
 	var lendTokenXDCPrice, collateralPrice, collateralTokenDecimal *big.Int
 	if collateralToken.String() != lendingstate.EmptyAddress {
 		collateralTokenDecimal, err = XDCXServ.GetTokenDecimal(pool.chain, cloneStateDb, collateralToken)

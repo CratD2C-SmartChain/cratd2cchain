@@ -53,8 +53,8 @@ func DeployValidator(transactOpts *bind.TransactOpts, contractBackend bind.Contr
 	minDeposit.SetString(MinCandidateCap, 10)
 	minVoterCap := new(big.Int)
 	minVoterCap.SetString(MinVoterCap, 10)
-	// Deposit 50K XDC
-	// Min Voter Cap 10 XDC
+	// Deposit 50K CRAT
+	// Min Voter Cap 10 CRAT
 	// 150 masternodes
 	// Candidate Delay Withdraw 30 days = 1296000 blocks
 	// Voter Delay Withdraw 10 days = 432000 blocks

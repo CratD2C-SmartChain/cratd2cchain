@@ -3,7 +3,7 @@ package core
 import (
 	"context"
 	"fmt"
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending/lendingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
 	"github.com/XinFinOrg/XDC-Subnet/common"
 	"github.com/XinFinOrg/XDC-Subnet/core/types"
 	"github.com/XinFinOrg/XDC-Subnet/crypto"
@@ -192,7 +192,7 @@ func TestSendLending(t *testing.T) {
 		nonce++
 		time.Sleep(time.Second)
 
-		// lendToken: USD, collateral: XDC
+		// lendToken: USD, collateral: CRAT
 		// amount 1000 USD
 		testSendLending(key, nonce, USDAddress, common.Address{}, new(big.Int).Mul(_1E8, big.NewInt(1000)), interestRate, lendingstate.Investing, lendingstate.LendingStatusNew, true, 0, 0, common.Hash{}, "")
 		nonce++
@@ -201,7 +201,7 @@ func TestSendLending(t *testing.T) {
 		nonce++
 		time.Sleep(time.Second)
 
-		// lendToken: BTC, collateral: XDC
+		// lendToken: BTC, collateral: CRAT
 		// amount 1 BTC
 		testSendLending(key, nonce, BTCAddress, common.Address{}, new(big.Int).Mul(_1E18, big.NewInt(1)), interestRate, lendingstate.Investing, lendingstate.LendingStatusNew, true, 0, 0, common.Hash{}, "")
 		nonce++
@@ -219,8 +219,8 @@ func TestSendLending(t *testing.T) {
 		nonce++
 		time.Sleep(time.Second)
 
-		// lendToken: XDC, collateral: BTC
-		// amount 1000 XDC
+		// lendToken: CRAT, collateral: BTC
+		// amount 1000 CRAT
 		testSendLending(key, nonce, common.HexToAddress(common.XDCNativeAddress), common.Address{}, new(big.Int).Mul(_1E18, big.NewInt(1000)), interestRate, lendingstate.Investing, lendingstate.LendingStatusNew, true, 0, 0, common.Hash{}, "")
 		nonce++
 		time.Sleep(time.Second)
@@ -228,8 +228,8 @@ func TestSendLending(t *testing.T) {
 		nonce++
 		time.Sleep(time.Second)
 
-		// lendToken: XDC, collateral: ETH
-		// amount 1000 XDC
+		// lendToken: CRAT, collateral: ETH
+		// amount 1000 CRAT
 		testSendLending(key, nonce, common.HexToAddress(common.XDCNativeAddress), common.Address{}, new(big.Int).Mul(_1E18, big.NewInt(1000)), interestRate, lendingstate.Investing, lendingstate.LendingStatusNew, true, 0, 0, common.Hash{}, "")
 		nonce++
 		time.Sleep(time.Second)

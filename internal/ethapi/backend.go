@@ -21,11 +21,11 @@ import (
 	"context"
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
 	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx"
 
 	"github.com/XinFinOrg/XDC-Subnet/accounts"
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -51,8 +51,8 @@ type Backend interface {
 	ChainDb() ethdb.Database
 	EventMux() *event.TypeMux
 	AccountManager() *accounts.Manager
-	XDCxService() *DCx.XDCX
-	LendingService() *DCxlending.Lending
+	XDCxService() *XDCx.XDCX
+	LendingService() *XDCxlending.Lending
 
 	// BlockChain API
 	SetHead(number uint64)
@@ -116,7 +116,7 @@ func GetAPIs(apiBackend Backend, chainReader consensus.ChainReader) []rpc.API {
 			Service:   NewPublicTransactionPoolAPI(apiBackend, nonceLock),
 			Public:    true,
 		}, {
-			Namespace: "DCx",
+			Namespace: "XDCx",
 			Version:   "1.0",
 			Service:   NewPublicXDCXTransactionPoolAPI(apiBackend, nonceLock),
 			Public:    true,

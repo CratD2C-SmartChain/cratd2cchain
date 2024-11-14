@@ -50,8 +50,8 @@ func main() {
 	}
 	XDCxListing.TransactOpts.GasPrice = big.NewInt(250000000000000)
 
-	fmt.Println("===> DCx listing address", XDCxListtingAddr.Hex())
-	fmt.Println("wait 10s to execute init smart contract : DCx listing ")
+	fmt.Println("===> XDCx listing address", XDCxListtingAddr.Hex())
+	fmt.Println("wait 10s to execute init smart contract : XDCx listing ")
 	time.Sleep(2 * time.Second)
 
 	// init Relayer Registration
@@ -103,7 +103,7 @@ func main() {
 		log.Fatal("Lending add collateral", err)
 	}
 
-	// XDC Collateral
+	// CRAT Collateral
 	nonce = nonce + 1
 	lendingRelayerRegistration.TransactOpts.Nonce = big.NewInt(int64(nonce))
 	_, err = lendingRelayerRegistration.AddCollateral(simulation.XDCNative, simulation.CollateralDepositRate, simulation.CollateralLiquidationRate, simulation.CollateralRecallRate)
@@ -128,12 +128,12 @@ func main() {
 		log.Fatal("Lending add base token USD", err)
 	}
 
-	// XDC lending base
+	// CRAT lending base
 	nonce = nonce + 1
 	lendingRelayerRegistration.TransactOpts.Nonce = big.NewInt(int64(nonce))
 	_, err = lendingRelayerRegistration.AddBaseToken(simulation.XDCNative)
 	if err != nil {
-		log.Fatal("Lending add base token XDC", err)
+		log.Fatal("Lending add base token CRAT", err)
 	}
 
 	// BTC lending base
@@ -182,15 +182,15 @@ func main() {
 		}
 	*/
 
-	// XDC/BTC
+	// CRAT/BTC
 	fromTokens = append(fromTokens, simulation.XDCNative)
 	toTokens = append(toTokens, tokenList[0]["address"].(common.Address))
 
-	// XDC/USDT
+	// CRAT/USDT
 	fromTokens = append(fromTokens, simulation.XDCNative)
 	toTokens = append(toTokens, tokenList[9]["address"].(common.Address))
 
-	// ETH/XDC
+	// ETH/CRAT
 	fromTokens = append(fromTokens, tokenList[1]["address"].(common.Address))
 	toTokens = append(toTokens, simulation.XDCNative)
 
@@ -235,7 +235,7 @@ func main() {
 	if err != nil {
 		log.Fatal("relayerRegistration Register ", err)
 	}
-	fmt.Println("wait 2s to apply token to list DCx")
+	fmt.Println("wait 2s to apply token to list XDCx")
 	time.Sleep(2 * time.Second)
 
 	// Lending apply
@@ -281,22 +281,22 @@ func main() {
 	terms = append(terms, big.NewInt(30*86400))
 	collaterals = append(collaterals, common.HexToAddress("0x0"))
 
-	// XDC 1 min
+	// CRAT 1 min
 	baseTokens = append(baseTokens, simulation.XDCNative)
 	terms = append(terms, big.NewInt(60))
 	collaterals = append(collaterals, common.HexToAddress("0x0"))
 
-	// XDC 1 day
+	// CRAT 1 day
 	baseTokens = append(baseTokens, simulation.XDCNative)
 	terms = append(terms, big.NewInt(86400))
 	collaterals = append(collaterals, common.HexToAddress("0x0"))
 
-	// XDC 7 days
+	// CRAT 7 days
 	baseTokens = append(baseTokens, simulation.XDCNative)
 	terms = append(terms, big.NewInt(7*86400))
 	collaterals = append(collaterals, common.HexToAddress("0x0"))
 
-	// XDC 30 days
+	// CRAT 30 days
 	baseTokens = append(baseTokens, simulation.XDCNative)
 	terms = append(terms, big.NewInt(30*86400))
 	collaterals = append(collaterals, common.HexToAddress("0x0"))

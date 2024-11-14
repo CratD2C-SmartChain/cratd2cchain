@@ -9,21 +9,21 @@ import (
 )
 
 var (
-	BaseXDC     = big.NewInt(0).Mul(big.NewInt(10), big.NewInt(100000000000000000)) // 1 XDC
+	BaseXDC     = big.NewInt(0).Mul(big.NewInt(10), big.NewInt(100000000000000000)) // 1 CRAT
 	RpcEndpoint = "http://127.0.0.1:8545/"
 	MainKey, _  = crypto.HexToECDSA(os.Getenv("MAIN_ADDRESS_KEY"))
 	MainAddr    = crypto.PubkeyToAddress(MainKey.PublicKey) //0x17F2beD710ba50Ed27aEa52fc4bD7Bda5ED4a037
 
 	// TRC21 Token
-	MinTRC21Apply  = big.NewInt(0).Mul(big.NewInt(10), BaseXDC) // 10 XDC
+	MinTRC21Apply  = big.NewInt(0).Mul(big.NewInt(10), BaseXDC) // 10 CRAT
 	TRC21TokenCap  = big.NewInt(0).Mul(big.NewInt(1000000000000), BaseXDC)
 	TRC21TokenFee  = big.NewInt(0)
-	XDCXListingFee = big.NewInt(0).Mul(big.NewInt(1000), BaseXDC) // 1000 XDC
+	XDCXListingFee = big.NewInt(0).Mul(big.NewInt(1000), BaseXDC) // 1000 CRAT
 
 	// XDCX
 	MaxRelayers               = big.NewInt(200)
 	MaxTokenList              = big.NewInt(200)
-	MinDeposit                = big.NewInt(0).Mul(big.NewInt(25000), BaseXDC) // 25000 XDC
+	MinDeposit                = big.NewInt(0).Mul(big.NewInt(25000), BaseXDC) // 25000 CRAT
 	CollateralDepositRate     = big.NewInt(150)
 	CollateralLiquidationRate = big.NewInt(110)
 	CollateralRecallRate      = big.NewInt(200)

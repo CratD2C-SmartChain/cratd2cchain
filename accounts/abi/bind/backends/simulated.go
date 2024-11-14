@@ -107,7 +107,7 @@ func SimulateWalletAddressAndSignFn(path string) (common.Address, func(account a
 	return a1.Address, ks.SignHash, nil
 }
 
-// XDC simulated backend for testing purpose.
+// CRAT simulated backend for testing purpose.
 func NewXDCSimulatedBackend(alloc core.GenesisAlloc, gasLimit uint64, chainConfig *params.ChainConfig, initialCandidates []common.Address) *SimulatedBackend {
 	// database := ethdb.NewMemDatabase()
 	database := rawdb.NewMemoryDatabase()

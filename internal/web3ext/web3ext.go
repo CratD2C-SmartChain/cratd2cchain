@@ -18,21 +18,21 @@
 package web3ext
 
 var Modules = map[string]string{
-	"admin":      Admin_JS,
-	"chequebook": Chequebook_JS,
-	"clique":     Clique_JS,
-	"CratD2C":    XDPoS_JS,
-	"debug":      Debug_JS,
-	"eth":        Eth_JS,
-	"miner":      Miner_JS,
-	"net":        Net_JS,
-	"personal":   Personal_JS,
-	"rpc":        RPC_JS,
-	"shh":        Shh_JS,
-	"DCx":        XDCX_JS,
-	"DCxlending": XDCXLending_JS,
-	"swarmfs":    SWARMFS_JS,
-	"txpool":     TxPool_JS,
+	"admin":       Admin_JS,
+	"chequebook":  Chequebook_JS,
+	"clique":      Clique_JS,
+	"CratD2C":     XDPoS_JS,
+	"debug":       Debug_JS,
+	"eth":         Eth_JS,
+	"miner":       Miner_JS,
+	"net":         Net_JS,
+	"personal":    Personal_JS,
+	"rpc":         RPC_JS,
+	"shh":         Shh_JS,
+	"XDCx":        XDCX_JS,
+	"XDCxlending": XDCXLending_JS,
+	"swarmfs":     SWARMFS_JS,
+	"txpool":      TxPool_JS,
 }
 
 const Chequebook_JS = `
@@ -661,7 +661,7 @@ web3._extend({
 
 const XDCX_JS = `
 web3._extend({
-	property: 'DCx',
+	property: 'XDCx',
 	methods: [
 		new web3._extend.Method({
 			name: 'version',
@@ -862,7 +862,7 @@ web3._extend({
 
 const XDCXLending_JS = `
 web3._extend({
-	property: 'DCxlending',
+	property: 'XDCxlending',
 	methods: [
 		new web3._extend.Method({
 			name: 'version',

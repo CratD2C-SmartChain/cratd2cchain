@@ -24,11 +24,11 @@ import (
 	"math/big"
 	"path/filepath"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
 	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx"
 
 	"github.com/XinFinOrg/XDC-Subnet/accounts"
 	"github.com/XinFinOrg/XDC-Subnet/common"
@@ -277,13 +277,13 @@ func (b *LesApiBackend) AreTwoBlockSamePath(bh1 common.Hash, bh2 common.Hash) bo
 
 // GetOrderNonce get order nonce
 func (b *LesApiBackend) GetOrderNonce(address common.Hash) (uint64, error) {
-	return 0, errors.New("cannot find DCx service")
+	return 0, errors.New("cannot find XDCx service")
 }
 
-func (b *LesApiBackend) XDCxService() *DCx.XDCX {
+func (b *LesApiBackend) XDCxService() *XDCx.XDCX {
 	return nil
 }
 
-func (b *LesApiBackend) LendingService() *DCxlending.Lending {
+func (b *LesApiBackend) LendingService() *XDCxlending.Lending {
 	return nil
 }

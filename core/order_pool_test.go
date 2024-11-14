@@ -256,7 +256,7 @@ func TestSendSellOrder(t *testing.T) {
 	testSendOrder(t, new(big.Int).SetUint64(1000000000000000000), new(big.Int).SetUint64(100000000000000000), "SELL", "NEW", 0)
 }
 func TestFilled(t *testing.T) {
-	////BTC/XDC
+	////BTC/CRAT
 	//BTCUSDPrice := new(big.Int).Mul(big.NewInt(1000000000000000000), big.NewInt(5000))
 	//testSendOrderXDCUSD(t, new(big.Int).Mul(big.NewInt(1000000000000000000), big.NewInt(5000)), BTCUSDPrice, "BUY", "NEW", 0)
 	//ETH/BTC

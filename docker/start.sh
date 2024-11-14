@@ -89,21 +89,21 @@ then
   if test -z "$PRIVATE_KEY" 
   then
     echo "PRIVATE_KEY environment variable has not been set, randomly creating a new one"
-    XDC account new \
+    CRAT account new \
       --datadir $DATA_DIR \
       --keystore $KEYSTORE_DIR \
       --password .pwd
-    XDC --datadir $DATA_DIR init /work/genesis.json  
-    wallet=$(XDC account list --datadir $DATA_DIR --keystore $KEYSTORE_DIR | head -n 1 | awk -v FS="({|})" '{print $2}')
+    CRAT --datadir $DATA_DIR init /work/genesis.json
+    wallet=$(CRAT account list --datadir $DATA_DIR --keystore $KEYSTORE_DIR | head -n 1 | awk -v FS="({|})" '{print $2}')
   else
     echo "${PRIVATE_KEY}" > ./private_key
     echo "Creating account from private key"
-    wallet=$(XDC account import --password .pwd --datadir $DATA_DIR ./private_key | awk -v FS="({|})" '{print $2}')
-    XDC --datadir $DATA_DIR init /work/genesis.json  
+    wallet=$(CRAT account import --password .pwd --datadir $DATA_DIR ./private_key | awk -v FS="({|})" '{print $2}')
+    CRAT --datadir $DATA_DIR init /work/genesis.json
   fi
 else
   echo "Wallet already exist, re-use the same one"
-  wallet=$(XDC account list --datadir $DATA_DIR | head -n 1 | awk -v FS="({|})" '{print $2}')
+  wallet=$(CRAT account list --datadir $DATA_DIR | head -n 1 | awk -v FS="({|})" '{print $2}')
 fi
 
 
@@ -135,7 +135,7 @@ params="$params --unlock $wallet"
 
 echo "Starting nodes with bootnodes of: $BOOTNODES ..."
 
-XDC $params \
+CRAT $params \
 --datadir $DATA_DIR \
 --rpc \
 --rpccorsdomain "*" \

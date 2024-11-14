@@ -25,7 +25,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCxlending"
+	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
 
 	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
 	"github.com/XinFinOrg/XDC-Subnet/eth/filters"
@@ -42,7 +42,7 @@ import (
 	"github.com/XinFinOrg/XDC-Subnet/core"
 	"github.com/XinFinOrg/XDC-Subnet/core/bloombits"
 
-	"github.com/XinFinOrg/XDC-Subnet/DCx"
+	"github.com/XinFinOrg/XDC-Subnet/XDCx"
 	"github.com/XinFinOrg/XDC-Subnet/core/types"
 	"github.com/XinFinOrg/XDC-Subnet/core/vm"
 	"github.com/XinFinOrg/XDC-Subnet/eth/downloader"
@@ -101,8 +101,8 @@ type Ethereum struct {
 	netRPCService *ethapi.PublicNetAPI
 
 	lock    sync.RWMutex // Protects the variadic fields (e.g. gas price and etherbase)
-	XDCX    *DCx.XDCX
-	Lending *DCxlending.Lending
+	XDCX    *XDCx.XDCX
+	Lending *XDCxlending.Lending
 }
 
 func (s *Ethereum) AddLesServer(ls LesServer) {
@@ -112,7 +112,7 @@ func (s *Ethereum) AddLesServer(ls LesServer) {
 
 // New creates a new Ethereum object (including the
 // initialisation of the common Ethereum object)
-func New(ctx *node.ServiceContext, config *Config, XDCXServ *DCx.XDCX, lendingServ *DCxlending.Lending) (*Ethereum, error) {
+func New(ctx *node.ServiceContext, config *Config, XDCXServ *XDCx.XDCX, lendingServ *XDCxlending.Lending) (*Ethereum, error) {
 	if config.SyncMode == downloader.LightSync {
 		return nil, errors.New("can't run eth.Ethereum in light sync mode, use les.LightEthereum")
 	}
@@ -312,7 +312,7 @@ func makeExtraData(extra []byte) []byte {
 		// create default extradata
 		extra, _ = rlp.EncodeToBytes([]interface{}{
 			uint(params.VersionMajor<<16 | params.VersionMinor<<8 | params.VersionPatch),
-			"XDC",
+			"CRAT",
 			runtime.Version(),
 			runtime.GOOS,
 		})
@@ -603,7 +603,7 @@ func (s *Ethereum) GetPeer() int {
 	return len(s.protocolManager.peers.peers)
 }
 
-func (s *Ethereum) GetXDCX() *DCx.XDCX {
+func (s *Ethereum) GetXDCX() *XDCx.XDCX {
 	return s.XDCX
 }
 
@@ -611,7 +611,7 @@ func (s *Ethereum) OrderPool() *core.OrderPool {
 	return s.orderPool
 }
 
-func (s *Ethereum) GetXDCXLending() *DCxlending.Lending {
+func (s *Ethereum) GetXDCXLending() *XDCxlending.Lending {
 	return s.Lending
 }
 
