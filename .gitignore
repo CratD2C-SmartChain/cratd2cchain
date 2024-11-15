@@ -57,3 +57,5 @@ profile.cov
 **/yarn-error.log
 coverage.txt
 go.sum
+
+*Zone.Identifier
