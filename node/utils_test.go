@@ -22,8 +22,8 @@ package node
 import (
 	"reflect"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 )
 
 // NoopService is a trivial implementation of the Service interface.

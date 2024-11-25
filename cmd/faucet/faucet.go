@@ -41,23 +41,23 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/eth"
-	"github.com/XinFinOrg/XDC-Subnet/eth/downloader"
-	"github.com/XinFinOrg/XDC-Subnet/ethclient"
-	"github.com/XinFinOrg/XDC-Subnet/ethstats"
-	"github.com/XinFinOrg/XDC-Subnet/les"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discv5"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/nat"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/keystore"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth/downloader"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethclient"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethstats"
+	"github.com/CratD2C-SmartChain/cratd2cchain/les"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discv5"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/nat"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 	"github.com/gorilla/websocket"
 )
 
@@ -462,7 +462,7 @@ func (f *faucet) apiHandler(w http.ResponseWriter, r *http.Request) {
 		case *noauthFlag:
 			username, avatar, address, err = authNoAuth(msg.URL)
 		default:
-			err = errors.New("Something funky happened, please open an issue at https://github.com/XinFinOrg/XDC-Subnet/issues")
+			err = errors.New("Something funky happened, please open an issue at https://github.com/CratD2C-SmartChain/cratd2cchain/issues")
 		}
 		if err != nil {
 			if err = sendError(wsconn, err); err != nil {

@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 )
 
 // In this example, our client wishes to track the latest 'block number'

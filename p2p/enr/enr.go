@@ -35,9 +35,9 @@ import (
 	"io"
 	"sort"
 
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/sha3"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/sha3"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 const SizeLimit = 300 // maximum encoded size of a node record in bytes

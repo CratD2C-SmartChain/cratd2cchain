@@ -25,19 +25,19 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
 
 	goruntime "runtime"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/evm/internal/compiler"
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm/runtime"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/evm/internal/compiler"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm/runtime"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/sha3"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/sha3"
 	"github.com/globalsign/mgo/bson"
 )
 

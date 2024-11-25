@@ -21,10 +21,10 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 var (
@@ -244,7 +244,7 @@ func (st *StateTransition) TransitionDb(owner common.Address) (ret []byte, usedG
 		vmerr error
 	)
 	// for debugging purpose
-	// TODO: clean it after fixing the issue https://github.com/XinFinOrg/XDC-Subnet/issues/401
+	// TODO: clean it after fixing the issue https://github.com/CratD2C-SmartChain/cratd2cchain/issues/401
 	var contractAction string
 	nonce := uint64(1)
 	if contractCreation {

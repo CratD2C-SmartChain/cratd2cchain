@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 )
 
 // CratD2C delegated-proof-of-stake protocol constants.

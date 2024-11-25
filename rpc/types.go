@@ -23,8 +23,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
 )
 
 // API describes the set of methods offered over the RPC interface

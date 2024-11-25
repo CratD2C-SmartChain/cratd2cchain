@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // handler handles JSON-RPC messages. There is one handler per connection. Note that

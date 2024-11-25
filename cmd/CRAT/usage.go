@@ -22,8 +22,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
-	"github.com/XinFinOrg/XDC-Subnet/internal/debug"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/debug"
 	"gopkg.in/urfave/cli.v1"
 )
 

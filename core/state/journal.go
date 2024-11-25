@@ -19,7 +19,7 @@ package state
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 type journalEntry interface {

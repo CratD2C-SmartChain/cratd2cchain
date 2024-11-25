@@ -19,7 +19,7 @@ package event_test
 import (
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
 )
 
 func ExampleFeed_acknowledgedEvents() {

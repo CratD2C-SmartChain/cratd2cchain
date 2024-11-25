@@ -26,8 +26,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // faucetDockerfile is the Dockerfile required to build an faucet container to

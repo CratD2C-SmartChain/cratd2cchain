@@ -3,7 +3,7 @@ package util
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
 )
 
 func RewardInflation(chain consensus.ChainReader, chainReward *big.Int, number uint64, blockPerYear uint64) *big.Int {

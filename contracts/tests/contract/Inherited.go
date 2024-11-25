@@ -6,10 +6,10 @@ package contract
 import (
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 )
 
 // Base1ABI is the input ABI used to generate the binding from.

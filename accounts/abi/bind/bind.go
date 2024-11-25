@@ -17,7 +17,7 @@
 // Package bind generates Ethereum contract Go bindings.
 //
 // Detailed usage document and tutorial available on the go-ethereum Wiki page:
-// https://github.com/XinFinOrg/XDC-Subnet/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts
+// https://github.com/CratD2C-SmartChain/cratd2cchain/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts
 package bind
 
 import (
@@ -28,7 +28,7 @@ import (
 	"text/template"
 	"unicode"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi"
 	"golang.org/x/tools/imports"
 )
 

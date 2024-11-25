@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
 )
 
 type TestPeer interface {

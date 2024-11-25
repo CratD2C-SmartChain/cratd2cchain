@@ -24,7 +24,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 )
 
 // Tests that ethash works correctly in test mode.
@@ -44,7 +44,7 @@ func TestTestMode(t *testing.T) {
 }
 
 // This test checks that cache lru logic doesn't crash under load.
-// It reproduces https://github.com/XinFinOrg/XDC-Subnet/issues/14943
+// It reproduces https://github.com/CratD2C-SmartChain/cratd2cchain/issues/14943
 func TestCacheFileEvict(t *testing.T) {
 	tmpdir, err := ioutil.TempDir("", "ethash-test")
 	if err != nil {

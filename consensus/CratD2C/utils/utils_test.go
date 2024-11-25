@@ -3,7 +3,7 @@ package utils
 import (
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 func TestCompareSignersLists(t *testing.T) {

@@ -19,20 +19,20 @@ package console
 import (
 	"bytes"
 	"errors"
-	"github.com/XinFinOrg/XDC-Subnet/XDCx"
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCx"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCxlending"
 	"io/ioutil"
 	"os"
 	"strings"
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/ethash"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/eth"
-	"github.com/XinFinOrg/XDC-Subnet/internal/jsre"
-	"github.com/XinFinOrg/XDC-Subnet/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/ethash"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/jsre"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
 )
 
 const (

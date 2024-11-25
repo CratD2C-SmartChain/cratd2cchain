@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/mclock"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/mclock"
 )
 
 // Subscription represents a stream of events. The carrier of the events is typically a

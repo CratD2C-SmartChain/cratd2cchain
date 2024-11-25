@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 /*
 http roundtripper to register for bzz url scheme
-see https://github.com/XinFinOrg/XDC-Subnet/issues/2040
+see https://github.com/CratD2C-SmartChain/cratd2cchain/issues/2040
 Usage:
 
 import (

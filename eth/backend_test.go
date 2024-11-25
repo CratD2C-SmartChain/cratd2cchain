@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/eth/util"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth/util"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 func TestRewardInflation(t *testing.T) {

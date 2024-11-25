@@ -23,10 +23,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/simulations/adapters"
-	p2ptest "github.com/XinFinOrg/XDC-Subnet/p2p/testing"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/simulations/adapters"
+	p2ptest "github.com/CratD2C-SmartChain/cratd2cchain/p2p/testing"
 )
 
 // handshake message type

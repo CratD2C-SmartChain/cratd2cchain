@@ -20,9 +20,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/eth/downloader"
-	"github.com/XinFinOrg/XDC-Subnet/light"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth/downloader"
+	"github.com/CratD2C-SmartChain/cratd2cchain/light"
 )
 
 const (

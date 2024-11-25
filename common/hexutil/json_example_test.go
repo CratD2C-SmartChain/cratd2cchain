@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
 )
 
 type MyType [5]byte

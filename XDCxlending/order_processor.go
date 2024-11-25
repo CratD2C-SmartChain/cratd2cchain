@@ -3,13 +3,13 @@ package XDCxlending
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCx/tradingstate"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCxlending/lendingstate"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 	"math/big"
 )
 

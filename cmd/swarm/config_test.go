@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
-	"github.com/XinFinOrg/XDC-Subnet/swarm"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/api"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/api"
 
 	"github.com/docker/docker/pkg/reexec"
 )

@@ -5,7 +5,7 @@ package whisperv5
 import (
 	"encoding/json"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
 )
 
 var _ = (*messageOverride)(nil)

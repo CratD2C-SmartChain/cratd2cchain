@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
 )
 
 // Tests that data bitset encoding and decoding works and is bijective.

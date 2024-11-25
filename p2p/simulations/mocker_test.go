@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
 )
 
 func TestMocker(t *testing.T) {

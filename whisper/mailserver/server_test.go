@@ -25,9 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	whisper "github.com/XinFinOrg/XDC-Subnet/whisper/whisperv6"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	whisper "github.com/CratD2C-SmartChain/cratd2cchain/whisper/whisperv6"
 )
 
 const powRequirement = 0.00001

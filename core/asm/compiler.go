@@ -23,8 +23,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
 )
 
 // Compiler contains information about the parsed source

@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
 	"gopkg.in/urfave/cli.v1"
 )
 

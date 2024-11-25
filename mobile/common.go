@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 // Hash represents the 32 byte Keccak256 hash of arbitrary data.

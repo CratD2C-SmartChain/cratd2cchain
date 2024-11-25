@@ -22,7 +22,7 @@ package geth
 import (
 	"errors"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discv5"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discv5"
 )
 
 // Enode represents a host on the network.

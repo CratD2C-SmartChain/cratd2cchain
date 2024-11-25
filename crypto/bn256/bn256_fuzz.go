@@ -23,8 +23,8 @@ import (
 	"bytes"
 	"math/big"
 
-	cloudflare "github.com/XinFinOrg/XDC-Subnet/crypto/bn256/cloudflare"
-	google "github.com/XinFinOrg/XDC-Subnet/crypto/bn256/google"
+	cloudflare "github.com/CratD2C-SmartChain/cratd2cchain/crypto/bn256/cloudflare"
+	google "github.com/CratD2C-SmartChain/cratd2cchain/crypto/bn256/google"
 )
 
 // FuzzAdd fuzzez bn256 addition between the Google and Cloudflare libraries.

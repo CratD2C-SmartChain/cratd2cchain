@@ -1,6 +1,6 @@
 package types
 
-import "github.com/XinFinOrg/XDC-Subnet/common"
+import "github.com/CratD2C-SmartChain/cratd2cchain/common"
 
 type ForensicsInfo struct {
 	HashPath        []string   `json:"hashPath"`

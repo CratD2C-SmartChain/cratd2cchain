@@ -1,6 +1,6 @@
 package engine_v2
 
-import "github.com/XinFinOrg/XDC-Subnet/core/types"
+import "github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 
 // the block after gap block, whose NextEpoch validators should not be empty
 func (x *CratD2C_v2) IsGapPlusOneBlock(header *types.Header) bool {

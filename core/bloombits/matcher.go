@@ -26,8 +26,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/bitutil"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/bitutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 // bloomIndexes represents the bit indexes inside the bloom filter that belong

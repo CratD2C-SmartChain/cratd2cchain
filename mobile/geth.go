@@ -24,17 +24,17 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/eth"
-	"github.com/XinFinOrg/XDC-Subnet/eth/downloader"
-	"github.com/XinFinOrg/XDC-Subnet/ethclient"
-	"github.com/XinFinOrg/XDC-Subnet/ethstats"
-	"github.com/XinFinOrg/XDC-Subnet/les"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/nat"
-	"github.com/XinFinOrg/XDC-Subnet/params"
-	whisper "github.com/XinFinOrg/XDC-Subnet/whisper/whisperv6"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth/downloader"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethclient"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethstats"
+	"github.com/CratD2C-SmartChain/cratd2cchain/les"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/nat"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	whisper "github.com/CratD2C-SmartChain/cratd2cchain/whisper/whisperv6"
 )
 
 // NodeConfig represents the collection of configuration values to fine tune the Geth

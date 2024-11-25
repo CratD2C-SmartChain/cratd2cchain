@@ -4,10 +4,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/utils"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 	"github.com/stretchr/testify/assert"
 )
 

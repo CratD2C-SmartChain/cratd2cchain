@@ -33,8 +33,8 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 type allocItem struct{ Addr, Balance *big.Int }

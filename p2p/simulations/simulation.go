@@ -20,7 +20,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
 )
 
 // Simulation provides a framework for running actions in a simulated network

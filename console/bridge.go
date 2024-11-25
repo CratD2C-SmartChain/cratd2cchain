@@ -24,10 +24,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/usbwallet"
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/internal/jsre"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/usbwallet"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/jsre"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	"github.com/dop251/goja"
 )
 

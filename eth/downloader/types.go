@@ -19,7 +19,7 @@ package downloader
 import (
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 )
 
 // peerDropFn is a callback type for dropping a peer detected as malicious.

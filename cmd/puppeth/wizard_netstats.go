@@ -23,8 +23,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 	"github.com/olekukonko/tablewriter"
 )
 

@@ -21,8 +21,8 @@ import (
 
 	"sync/atomic"
 
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 type CpuAgent struct {

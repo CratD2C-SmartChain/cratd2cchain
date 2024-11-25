@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics"
 )
 
 /*
@@ -65,7 +65,7 @@ var (
 	errOperationTimedOut    = errors.New("operation timed out")
 )
 
-//metrics variables
+// metrics variables
 var (
 	newChunkCounter = metrics.NewRegisteredCounter("storage.chunks.new", nil)
 )

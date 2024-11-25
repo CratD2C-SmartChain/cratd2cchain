@@ -19,7 +19,7 @@ package vm
 import (
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 // EnableEIP enables the given EIP on the config.

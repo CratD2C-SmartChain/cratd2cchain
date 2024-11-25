@@ -17,7 +17,7 @@
 package rawdb
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/ethdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb"
 )
 
 // table is a wrapper around a database that prefixes each key access with a pre-

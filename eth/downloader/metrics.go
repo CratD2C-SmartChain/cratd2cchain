@@ -19,7 +19,7 @@
 package downloader
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics"
 )
 
 var (

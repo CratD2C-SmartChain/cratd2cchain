@@ -19,8 +19,8 @@ package les
 import (
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/bitutil"
-	"github.com/XinFinOrg/XDC-Subnet/light"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/bitutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/light"
 )
 
 const (

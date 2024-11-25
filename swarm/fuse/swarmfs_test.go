@@ -28,8 +28,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/swarm/api"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/storage"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/api"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/storage"
 )
 
 type fileInfo struct {

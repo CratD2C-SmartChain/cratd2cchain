@@ -22,7 +22,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/internal/cmdtest"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/cmdtest"
 	"github.com/docker/docker/pkg/reexec"
 )
 

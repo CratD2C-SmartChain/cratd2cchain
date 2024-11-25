@@ -7,13 +7,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/engines/engine_v2"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/utils"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/engines/engine_v2"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 	"github.com/stretchr/testify/assert"
 )
 

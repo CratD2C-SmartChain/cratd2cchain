@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // explorerDockerfile is the Dockerfile required to run a block explorer.

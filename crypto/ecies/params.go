@@ -42,7 +42,7 @@ import (
 	"fmt"
 	"hash"
 
-	ethcrypto "github.com/XinFinOrg/XDC-Subnet/crypto"
+	ethcrypto "github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 var (
