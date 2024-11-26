@@ -28,12 +28,12 @@ import (
 
 	"github.com/CratD2C-SmartChain/cratd2cchain/accounts"
 	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/keystore"
+	reexec "github.com/CratD2C-SmartChain/cratd2cchain/exec"
 	"github.com/CratD2C-SmartChain/cratd2cchain/internal/cmdtest"
 	"github.com/CratD2C-SmartChain/cratd2cchain/node"
 	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
 	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	"github.com/CratD2C-SmartChain/cratd2cchain/swarm"
-	"github.com/docker/docker/pkg/reexec"
 )
 
 func init() {

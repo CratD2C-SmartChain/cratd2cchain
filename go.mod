@@ -10,7 +10,6 @@ require (
 	github.com/cespare/cp v1.1.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/deckarep/golang-set v1.8.0
-	github.com/docker/docker v1.4.2-0.20180625184442-8e610b2b55bf
 	github.com/dop251/goja v0.0.0-20230806174421-c933cf95e127
 	github.com/edsrzf/mmap-go v1.0.0
 	github.com/ethereum/go-ethereum v1.13.15
@@ -95,6 +94,5 @@ require (
 	golang.org/x/term v0.19.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	google.golang.org/protobuf v1.35.2 // indirect
-	gotest.tools v2.2.0+incompatible // indirect
 	rsc.io/tmplfunc v0.0.3 // indirect
 )

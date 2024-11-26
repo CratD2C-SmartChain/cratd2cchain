@@ -24,11 +24,11 @@ import (
 	"os"
 
 	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	reexec "github.com/CratD2C-SmartChain/cratd2cchain/exec"
 	"github.com/CratD2C-SmartChain/cratd2cchain/node"
 	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
 	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
 	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
-	"github.com/docker/docker/pkg/reexec"
 	"github.com/gorilla/websocket"
 )
 

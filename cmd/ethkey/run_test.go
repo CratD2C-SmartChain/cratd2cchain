@@ -21,8 +21,8 @@ import (
 	"os"
 	"testing"
 
+	reexec "github.com/CratD2C-SmartChain/cratd2cchain/exec"
 	"github.com/CratD2C-SmartChain/cratd2cchain/internal/cmdtest"
-	"github.com/docker/docker/pkg/reexec"
 )
 
 type testEthkey struct {
