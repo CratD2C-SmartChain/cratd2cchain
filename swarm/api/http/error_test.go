@@ -25,7 +25,7 @@ import (
 
 	"golang.org/x/net/html"
 
-	"github.com/XinFinOrg/XDC-Subnet/swarm/testutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/testutil"
 )
 
 func TestError(t *testing.T) {

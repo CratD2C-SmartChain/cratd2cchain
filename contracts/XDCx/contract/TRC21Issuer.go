@@ -4,12 +4,12 @@
 package contract
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
 	"math/big"
 	"strings"
 )

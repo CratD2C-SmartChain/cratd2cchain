@@ -30,8 +30,6 @@ import (
 	"testing"
 	"text/template"
 	"time"
-
-	"github.com/docker/docker/pkg/reexec"
 )
 
 func NewTestCmd(t *testing.T, data interface{}) *TestCmd {
@@ -57,7 +55,7 @@ type TestCmd struct {
 func (tt *TestCmd) Run(name string, args ...string) {
 	tt.stderr = &testlogger{t: tt.T}
 	tt.cmd = &exec.Cmd{
-		Path:   reexec.Self(),
+		Path:   "/proc/self/exe",
 		Args:   append([]string{name}, args...),
 		Stderr: tt.stderr,
 	}
@@ -77,7 +75,7 @@ func (tt *TestCmd) Run(name string, args ...string) {
 // InputLine writes the given text to the childs stdin.
 // This method can also be called from an expect template, e.g.:
 //
-//     geth.expect(`Passphrase: {{.InputLine "password"}}`)
+//	geth.expect(`Passphrase: {{.InputLine "password"}}`)
 func (tt *TestCmd) InputLine(s string) string {
 	io.WriteString(tt.stdin, s+"\n")
 	return ""

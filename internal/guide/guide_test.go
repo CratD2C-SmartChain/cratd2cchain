@@ -30,8 +30,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/keystore"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 )
 
 // Tests that the account management snippets work correctly.

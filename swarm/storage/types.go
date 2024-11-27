@@ -24,9 +24,9 @@ import (
 	"io"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/bmt"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/sha3"
+	"github.com/CratD2C-SmartChain/cratd2cchain/bmt"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/sha3"
 )
 
 type Hasher func() hash.Hash

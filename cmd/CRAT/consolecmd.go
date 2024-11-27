@@ -24,10 +24,10 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
-	"github.com/XinFinOrg/XDC-Subnet/console"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/console"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -43,7 +43,7 @@ var (
 		Description: `
 The CRAT console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Ðapp JavaScript API.
-See https://github.com/XinFinOrg/XDC-Subnet/wiki/JavaScript-Console.`,
+See https://github.com/CratD2C-SmartChain/cratd2cchain/wiki/JavaScript-Console.`,
 	}
 
 	attachCommand = cli.Command{
@@ -56,7 +56,7 @@ See https://github.com/XinFinOrg/XDC-Subnet/wiki/JavaScript-Console.`,
 		Description: `
 The CRAT console is an interactive shell for the JavaScript runtime environment
 which exposes a node admin interface as well as the Ðapp JavaScript API.
-See https://github.com/XinFinOrg/XDC-Subnet/wiki/JavaScript-Console.
+See https://github.com/CratD2C-SmartChain/cratd2cchain/wiki/JavaScript-Console.
 This command allows to open a console on a running CRAT node.`,
 	}
 
@@ -69,7 +69,7 @@ This command allows to open a console on a running CRAT node.`,
 		Category:  "CONSOLE COMMANDS",
 		Description: `
 The JavaScript VM exposes a node admin interface as well as the Ðapp
-JavaScript API. See https://github.com/XinFinOrg/XDC-Subnet/wiki/JavaScript-Console`,
+JavaScript API. See https://github.com/CratD2C-SmartChain/cratd2cchain/wiki/JavaScript-Console`,
 	}
 )
 

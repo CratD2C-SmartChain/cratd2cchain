@@ -20,9 +20,9 @@ import (
 	"container/ring"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // headerRetriever is used by the unconfirmed block set to verify whether a previously

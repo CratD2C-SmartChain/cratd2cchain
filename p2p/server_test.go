@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/sha3"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/sha3"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
 )
 
 func init() {

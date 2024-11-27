@@ -22,10 +22,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/keystore"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 // NewTransactor is a utility method to easily create a transaction signer from

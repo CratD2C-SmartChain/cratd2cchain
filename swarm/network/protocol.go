@@ -37,13 +37,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/contracts/chequebook"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/metrics"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	bzzswap "github.com/XinFinOrg/XDC-Subnet/swarm/services/swap"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/services/swap/swap"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/storage"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/chequebook"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	bzzswap "github.com/CratD2C-SmartChain/cratd2cchain/swarm/services/swap"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/services/swap/swap"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/storage"
 )
 
 // metrics variables

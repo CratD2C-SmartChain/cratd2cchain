@@ -21,11 +21,11 @@ import (
 	"net"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/contracts/chequebook"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/network/kademlia"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/services/swap"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/storage"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/chequebook"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/network/kademlia"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/services/swap"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/storage"
 )
 
 /*

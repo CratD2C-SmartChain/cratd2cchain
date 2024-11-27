@@ -26,17 +26,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind/backends"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	contractValidator "github.com/XinFinOrg/XDC-Subnet/contracts/validator/contract"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/params"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind/backends"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	contractValidator "github.com/CratD2C-SmartChain/cratd2cchain/contracts/validator/contract"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 var (

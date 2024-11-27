@@ -5,8 +5,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 const DefaultFeeRate = 10 // 10 / XDCXBaseFee = 10 / 10000 = 0.1%

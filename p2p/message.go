@@ -25,9 +25,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/event"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 // Msg defines the structure of a p2p message.

@@ -17,10 +17,10 @@
 package state
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 var addr = common.BytesToAddress([]byte("test"))

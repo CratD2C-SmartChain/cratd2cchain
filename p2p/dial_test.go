@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/netutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/netutil"
 	"github.com/davecgh/go-spew/spew"
 )
 

@@ -3,7 +3,7 @@ package utils
 import (
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
 	"github.com/stretchr/testify/assert"
 )
 

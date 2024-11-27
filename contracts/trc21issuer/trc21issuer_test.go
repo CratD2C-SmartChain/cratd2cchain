@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind/backends"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind/backends"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 var (

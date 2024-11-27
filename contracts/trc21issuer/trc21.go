@@ -3,9 +3,9 @@ package trc21issuer
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/trc21issuer/contract"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/trc21issuer/contract"
 )
 
 type MyTRC21 struct {

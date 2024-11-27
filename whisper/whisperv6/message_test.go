@@ -23,9 +23,9 @@ import (
 	mrand "math/rand"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 func generateMessageParams() (*MessageParams, error) {

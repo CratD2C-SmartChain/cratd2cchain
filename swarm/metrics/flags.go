@@ -19,10 +19,10 @@ package metrics
 import (
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	gethmetrics "github.com/XinFinOrg/XDC-Subnet/metrics"
-	"github.com/XinFinOrg/XDC-Subnet/metrics/influxdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	gethmetrics "github.com/CratD2C-SmartChain/cratd2cchain/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics/influxdb"
 	"gopkg.in/urfave/cli.v1"
 )
 

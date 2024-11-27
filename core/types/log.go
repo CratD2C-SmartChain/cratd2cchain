@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 //go:generate gencodec -type Log -field-override logMarshaling -out gen_log_json.go

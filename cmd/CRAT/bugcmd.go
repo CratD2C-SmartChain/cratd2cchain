@@ -26,10 +26,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/internal/browser"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/internal/browser"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
 	cli "gopkg.in/urfave/cli.v1"
 )
 
@@ -41,7 +41,7 @@ var bugCommand = cli.Command{
 	Category:  "MISCELLANEOUS COMMANDS",
 }
 
-const issueUrl = "https://github.com/XinFinOrg/XDC-Subnet/issues/new"
+const issueUrl = "https://github.com/CratD2C-SmartChain/cratd2cchain/issues/new"
 
 // reportBug reports a bug by opening a new URL to the go-ethereum GH issue
 // tracker and setting default values as the issue body.

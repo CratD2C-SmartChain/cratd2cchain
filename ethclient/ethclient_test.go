@@ -16,7 +16,7 @@
 
 package ethclient
 
-import "github.com/XinFinOrg/XDC-Subnet"
+import "github.com/CratD2C-SmartChain/cratd2cchain"
 
 // Verify that Client implements the ethereum interfaces.
 var (

@@ -24,11 +24,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/mclock"
-	"github.com/XinFinOrg/XDC-Subnet/event"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/mclock"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 const (

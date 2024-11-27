@@ -3,17 +3,17 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/XDCx/simulation"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/XDCx/simulation"
 	"math/big"
 	"os"
 	"strconv"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/XDCx"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/ethclient"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/XDCx"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethclient"
 )
 
 func main() {

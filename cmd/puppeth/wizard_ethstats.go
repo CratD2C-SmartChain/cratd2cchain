@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // deployEthstats queries the user for various input on deploying an ethstats

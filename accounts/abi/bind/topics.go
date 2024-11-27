@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 // makeTopics converts a filter query argument list into a filter topic set.

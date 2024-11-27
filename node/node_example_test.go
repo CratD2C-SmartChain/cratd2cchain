@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 )
 
 // SampleService is a trivial network service that can be attached to a node for

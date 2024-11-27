@@ -25,7 +25,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 var testAddrHex = "970e8128ab834e8eac17ab8e3812f010678cf791"

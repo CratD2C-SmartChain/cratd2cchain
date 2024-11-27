@@ -26,11 +26,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/api"
-	swarm "github.com/XinFinOrg/XDC-Subnet/swarm/api/client"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/storage"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/testutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/api"
+	swarm "github.com/CratD2C-SmartChain/cratd2cchain/swarm/api/client"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/storage"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/testutil"
 )
 
 func TestBzzGetPath(t *testing.T) {

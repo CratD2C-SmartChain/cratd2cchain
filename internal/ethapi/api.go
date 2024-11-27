@@ -25,32 +25,32 @@ import (
 	"strings"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCxlending/lendingstate"
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCxlending/lendingstate"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCx/tradingstate"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
-	"github.com/XinFinOrg/XDC-Subnet/common/sort"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/utils"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/ethash"
-	contractValidator "github.com/XinFinOrg/XDC-Subnet/contracts/validator/contract"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/params"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/keystore"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/sort"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/ethash"
+	contractValidator "github.com/CratD2C-SmartChain/cratd2cchain/contracts/validator/contract"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
 )
@@ -445,7 +445,7 @@ func signHash(data []byte) []byte {
 //
 // The key used to calculate the signature is decrypted with the given password.
 //
-// https://github.com/XinFinOrg/XDC-Subnet/wiki/Management-APIs#personal_sign
+// https://github.com/CratD2C-SmartChain/cratd2cchain/wiki/Management-APIs#personal_sign
 func (s *PrivateAccountAPI) Sign(ctx context.Context, data hexutil.Bytes, addr common.Address, passwd string) (hexutil.Bytes, error) {
 	// Look up the wallet containing the requested signer
 	account := accounts.Account{Address: addr}
@@ -472,7 +472,7 @@ func (s *PrivateAccountAPI) Sign(ctx context.Context, data hexutil.Bytes, addr c
 // Note, the signature must conform to the secp256k1 curve R, S and V values, where
 // the V value must be be 27 or 28 for legacy reasons.
 //
-// https://github.com/XinFinOrg/XDC-Subnet/wiki/Management-APIs#personal_ecRecover
+// https://github.com/CratD2C-SmartChain/cratd2cchain/wiki/Management-APIs#personal_ecRecover
 func (s *PrivateAccountAPI) EcRecover(ctx context.Context, data, sig hexutil.Bytes) (common.Address, error) {
 	if len(sig) != 65 {
 		return common.Address{}, fmt.Errorf("signature must be 65 bytes long")

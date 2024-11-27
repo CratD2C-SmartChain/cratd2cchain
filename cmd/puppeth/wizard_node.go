@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/keystore"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/keystore"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // deployNode creates a new node configuration based on some user input.

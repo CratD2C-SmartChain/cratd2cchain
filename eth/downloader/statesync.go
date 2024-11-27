@@ -18,18 +18,18 @@ package downloader
 
 import (
 	"fmt"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb/memorydb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb/memorydb"
 	"hash"
 	"sync"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/sha3"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/trie"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/sha3"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/trie"
 )
 
 // stateReq represents a batch of state fetch requests groupped together into

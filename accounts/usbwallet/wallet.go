@@ -25,11 +25,11 @@ import (
 	"sync"
 	"time"
 
-	ethereum "github.com/XinFinOrg/XDC-Subnet"
-	"github.com/XinFinOrg/XDC-Subnet/accounts"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	ethereum "github.com/CratD2C-SmartChain/cratd2cchain"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 	"github.com/karalabe/hid"
 )
 

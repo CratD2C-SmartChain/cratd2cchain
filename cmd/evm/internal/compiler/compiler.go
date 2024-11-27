@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/asm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/asm"
 )
 
 func Compile(fn string, src []byte, debug bool) (string, error) {

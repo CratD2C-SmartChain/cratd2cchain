@@ -24,8 +24,8 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/randentropy"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/randentropy"
 )
 
 const TestCount = 1000

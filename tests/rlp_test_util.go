@@ -24,7 +24,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 // RLPTest is the JSON structure of a single RLP test.

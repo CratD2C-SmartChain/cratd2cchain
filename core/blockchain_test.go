@@ -24,15 +24,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/ethash"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/ethash"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 // Test fork of length N starting from block i
@@ -1180,7 +1180,7 @@ func TestEIP161AccountRemoval(t *testing.T) {
 // tests that under weird reorg conditions the blockchain and its internal header-
 // chain return the same latest block/header.
 //
-// https://github.com/XinFinOrg/XDC-Subnet/pull/15941how Source Control
+// https://github.com/CratD2C-SmartChain/cratd2cchain/pull/15941how Source Control
 func TestBlockchainHeaderchainReorgConsistency(t *testing.T) {
 	// Generate a canonical chain to act as the main dataset
 	engine := ethash.NewFaker()

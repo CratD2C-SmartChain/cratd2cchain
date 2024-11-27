@@ -20,9 +20,9 @@ import (
 	"context"
 	"sync"
 
-	ethereum "github.com/XinFinOrg/XDC-Subnet"
-	"github.com/XinFinOrg/XDC-Subnet/event"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	ethereum "github.com/CratD2C-SmartChain/cratd2cchain"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 )
 
 // PublicDownloaderAPI provides an API which gives information about the current synchronisation status.

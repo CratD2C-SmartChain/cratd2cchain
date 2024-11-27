@@ -19,10 +19,10 @@ package storage
 import (
 	"encoding/binary"
 
-	"github.com/XinFinOrg/XDC-Subnet/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics"
 )
 
-//metrics variables
+// metrics variables
 var (
 	dbStorePutCounter = metrics.NewRegisteredCounter("storage.db.dbstore.put.count", nil)
 )

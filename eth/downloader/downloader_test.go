@@ -25,17 +25,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/ethash"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb"
-	"github.com/XinFinOrg/XDC-Subnet/event"
-	"github.com/XinFinOrg/XDC-Subnet/params"
-	"github.com/XinFinOrg/XDC-Subnet/trie"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/ethash"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/trie"
 )
 
 var (

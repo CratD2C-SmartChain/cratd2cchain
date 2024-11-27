@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 // Method represents a callable given a `Name` and whether the method is a constant.

@@ -24,8 +24,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common/compiler"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/compiler"
 )
 
 var (

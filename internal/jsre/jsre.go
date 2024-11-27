@@ -26,8 +26,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/internal/jsre/deps"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/jsre/deps"
 	"github.com/dop251/goja"
 )
 

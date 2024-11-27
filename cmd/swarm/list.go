@@ -22,8 +22,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
-	swarm "github.com/XinFinOrg/XDC-Subnet/swarm/api/client"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
+	swarm "github.com/CratD2C-SmartChain/cratd2cchain/swarm/api/client"
 	"gopkg.in/urfave/cli.v1"
 )
 

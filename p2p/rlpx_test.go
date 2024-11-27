@@ -30,11 +30,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/ecies"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/sha3"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/ecies"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/sha3"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 	"github.com/davecgh/go-spew/spew"
 )
 

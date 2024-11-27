@@ -16,7 +16,7 @@
 
 package bind
 
-import "github.com/XinFinOrg/XDC-Subnet/accounts/abi"
+import "github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi"
 
 // tmplData is the data structure required to fill the binding template.
 type tmplData struct {

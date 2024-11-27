@@ -8,12 +8,12 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/trc21issuer"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/trc21issuer/simulation"
-	"github.com/XinFinOrg/XDC-Subnet/ethclient"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/trc21issuer"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/trc21issuer/simulation"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethclient"
 )
 
 var (

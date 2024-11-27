@@ -25,8 +25,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/swarm/api"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/testutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/api"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/testutil"
 )
 
 // TestClientUploadDownloadRaw test uploading and downloading raw data to swarm

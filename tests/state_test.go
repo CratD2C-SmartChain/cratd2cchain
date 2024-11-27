@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
 )
 
 func TestState(t *testing.T) {

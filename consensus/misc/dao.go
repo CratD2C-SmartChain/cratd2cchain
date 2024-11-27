@@ -21,9 +21,9 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 var (

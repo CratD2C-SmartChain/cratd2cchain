@@ -19,7 +19,7 @@ package vm
 import (
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 )
 
 func TestJumpDestAnalysis(t *testing.T) {

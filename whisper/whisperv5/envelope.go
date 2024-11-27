@@ -26,11 +26,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/ecies"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/ecies"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 // Envelope represents a clear-text data packet to transmit through the Whisper

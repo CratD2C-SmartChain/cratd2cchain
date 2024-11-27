@@ -19,7 +19,7 @@ package params
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 // DAOForkBlockExtra is the block header extra-data field to set for the DAO fork

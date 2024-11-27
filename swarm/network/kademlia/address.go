@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 type Address common.Hash

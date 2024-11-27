@@ -47,7 +47,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/internal/build"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/build"
 )
 
 var (

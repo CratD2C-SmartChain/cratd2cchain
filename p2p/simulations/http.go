@@ -29,11 +29,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/event"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/simulations/adapters"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/simulations/adapters"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	"github.com/gorilla/websocket"
 	"github.com/julienschmidt/httprouter"
 )

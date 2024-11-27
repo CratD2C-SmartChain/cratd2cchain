@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // manageServers displays a list of servers the user can disconnect from, and an

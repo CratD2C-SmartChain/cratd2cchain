@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/hexutil"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
-	"github.com/XinFinOrg/XDC-Subnet/trie"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/hexutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/trie"
 )
 
 // implement interface only for testing verifyProof
@@ -40,8 +40,8 @@ func (n *proofPairList) Get(key []byte) ([]byte, error) {
 }
 
 func TestTransactionProof(t *testing.T) {
-	to1:= common.HexToAddress("0x01")
-	to2:= common.HexToAddress("0x02")
+	to1 := common.HexToAddress("0x01")
+	to2 := common.HexToAddress("0x02")
 	t1 := types.NewTransaction(1, to1, big.NewInt(1), 1, big.NewInt(1), []byte{})
 	t2 := types.NewTransaction(2, to2, big.NewInt(2), 2, big.NewInt(2), []byte{})
 	t3 := types.NewTransaction(3, to2, big.NewInt(3), 3, big.NewInt(3), []byte{})

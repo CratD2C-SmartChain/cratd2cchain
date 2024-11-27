@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/internal/cmdtest"
-	"github.com/docker/docker/pkg/reexec"
+	reexec "github.com/CratD2C-SmartChain/cratd2cchain/exec"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/cmdtest"
 )
 
 func tmpdir(t *testing.T) string {

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // Enabled is checked by the constructor functions for all of the

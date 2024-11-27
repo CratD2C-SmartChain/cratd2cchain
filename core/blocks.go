@@ -16,7 +16,7 @@
 
 package core
 
-import "github.com/XinFinOrg/XDC-Subnet/common"
+import "github.com/CratD2C-SmartChain/cratd2cchain/common"
 
 // BadHashes represent a set of manually tracked bad hashes (usually hard forks)
 var BadHashes = map[common.Hash]bool{

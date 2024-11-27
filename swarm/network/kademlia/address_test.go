@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 func (Address) Generate(rand *rand.Rand, size int) reflect.Value {

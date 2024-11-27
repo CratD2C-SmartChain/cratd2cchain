@@ -17,16 +17,16 @@
 package eth
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/bitutil"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/bloombits"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/bitutil"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/bloombits"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 const (

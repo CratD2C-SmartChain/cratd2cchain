@@ -19,8 +19,8 @@ package vm
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
 )
 
 // calcMemSize64 calculates the required memory size, and returns

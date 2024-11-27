@@ -19,8 +19,8 @@ package trie
 import (
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb/memorydb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb/memorydb"
 )
 
 // Tests that the trie database returns a missing trie Node error if attempting

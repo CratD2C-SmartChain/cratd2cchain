@@ -1,12 +1,12 @@
 package bft
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/utils"
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 const maxBlockDist = 7 // Maximum allowed backward distance from the chain head, 7 is just a magic number indicate very close block

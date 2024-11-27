@@ -22,7 +22,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/asm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/asm"
 	cli "gopkg.in/urfave/cli.v1"
 )
 

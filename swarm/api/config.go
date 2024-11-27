@@ -22,14 +22,14 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/ens"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/network"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/services/swap"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/storage"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/ens"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/network"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/services/swap"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/storage"
 )
 
 const (

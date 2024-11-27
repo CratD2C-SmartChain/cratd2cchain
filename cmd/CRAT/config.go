@@ -29,15 +29,15 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx"
-	"github.com/XinFinOrg/XDC-Subnet/cmd/utils"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/eth"
-	"github.com/XinFinOrg/XDC-Subnet/internal/debug"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/params"
-	whisper "github.com/XinFinOrg/XDC-Subnet/whisper/whisperv6"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCx"
+	"github.com/CratD2C-SmartChain/cratd2cchain/cmd/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/eth"
+	"github.com/CratD2C-SmartChain/cratd2cchain/internal/debug"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	whisper "github.com/CratD2C-SmartChain/cratd2cchain/whisper/whisperv6"
 	"github.com/naoina/toml"
 )
 

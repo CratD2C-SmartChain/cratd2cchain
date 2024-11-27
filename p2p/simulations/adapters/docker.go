@@ -27,10 +27,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/docker/docker/pkg/reexec"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
 )
 
 // DockerAdapter is a NodeAdapter which runs simulation nodes inside Docker
@@ -148,7 +147,7 @@ func buildDockerImage() error {
 	defer os.RemoveAll(dir)
 
 	// copy the current binary into the build context
-	bin, err := os.Open(reexec.Self())
+	bin, err := os.Open("/proc/self/exe")
 	if err != nil {
 		return err
 	}

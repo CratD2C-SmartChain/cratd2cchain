@@ -17,13 +17,13 @@
 package core
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
 	"math/big"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/consensus/ethash"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/ethash"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 // Tests that DAO-fork enabled clients can properly filter out fork-commencing

@@ -32,14 +32,14 @@ import (
 	"io/ioutil"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/metrics"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 )
 
-//metrics variables
+// metrics variables
 var (
 	gcCounter            = metrics.NewRegisteredCounter("storage.db.dbstore.gc.count", nil)
 	dbStoreDeleteCounter = metrics.NewRegisteredCounter("storage.db.dbstore.rm.count", nil)
@@ -540,7 +540,8 @@ func (s *DbStore) Close() {
 	s.db.Close()
 }
 
-//  describes a section of the DbStore representing the unsynced
+//	describes a section of the DbStore representing the unsynced
+//
 // domain relevant to a peer
 // Start - Stop designate a continuous area Keys in an address space
 // typically the addresses closer to us than to the peer but not closer

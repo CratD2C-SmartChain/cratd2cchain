@@ -19,19 +19,19 @@ package CratD2C
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/consensus"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/engines/engine_v2"
-	"github.com/XinFinOrg/XDC-Subnet/consensus/CratD2C/utils"
-	"github.com/XinFinOrg/XDC-Subnet/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/engines/engine_v2"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/CratD2C/utils"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
 
-	"github.com/XinFinOrg/XDC-Subnet/consensus/clique"
-	"github.com/XinFinOrg/XDC-Subnet/core/state"
-	"github.com/XinFinOrg/XDC-Subnet/core/types"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb"
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/params"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/consensus/clique"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/state"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/types"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	lru "github.com/hashicorp/golang-lru"
 )
 

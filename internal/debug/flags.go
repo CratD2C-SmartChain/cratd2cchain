@@ -24,10 +24,10 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/log/term"
-	"github.com/XinFinOrg/XDC-Subnet/metrics"
-	"github.com/XinFinOrg/XDC-Subnet/metrics/exp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log/term"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics"
+	"github.com/CratD2C-SmartChain/cratd2cchain/metrics/exp"
 	colorable "github.com/mattn/go-colorable"
 	"gopkg.in/urfave/cli.v1"
 )

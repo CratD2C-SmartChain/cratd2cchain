@@ -17,8 +17,8 @@
 package runtime
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
 )
 
 func NewEnv(cfg *Config) *vm.EVM {

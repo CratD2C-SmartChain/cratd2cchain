@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/XinFinOrg/XDC-Subnet/event"
+	"github.com/CratD2C-SmartChain/cratd2cchain/event"
 )
 
 // This example demonstrates how SubscriptionScope can be used to control the lifetime of

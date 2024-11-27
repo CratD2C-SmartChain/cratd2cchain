@@ -25,11 +25,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
-	"github.com/XinFinOrg/XDC-Subnet/swarm"
-	"github.com/XinFinOrg/XDC-Subnet/swarm/api"
-
-	"github.com/docker/docker/pkg/reexec"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/swarm/api"
 )
 
 func TestDumpConfig(t *testing.T) {
@@ -277,7 +275,7 @@ func TestEnvVars(t *testing.T) {
 	//node.Cmd.cmd.Env = envVars
 	//the above assignment does not work, so we need a custom Cmd here in order to pass envVars:
 	cmd := &exec.Cmd{
-		Path:   reexec.Self(),
+		Path:   "/proc/self/exe",
 		Args:   append([]string{"swarm-test"}, flags...),
 		Stderr: os.Stderr,
 		Stdout: os.Stdout,

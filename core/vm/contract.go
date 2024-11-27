@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 // ContractRef is a reference to the contract's backing object

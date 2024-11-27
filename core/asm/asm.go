@@ -21,7 +21,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
 )
 
 // Iterator for disassembled EVM instructions

@@ -17,11 +17,11 @@
 package tests
 
 import (
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 	"math/big"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/vm"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm"
 )
 
 func TestVM(t *testing.T) {

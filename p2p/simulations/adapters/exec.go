@@ -35,12 +35,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/log"
-	"github.com/XinFinOrg/XDC-Subnet/node"
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discover"
-	"github.com/XinFinOrg/XDC-Subnet/rpc"
-	"github.com/docker/docker/pkg/reexec"
+	reexec "github.com/CratD2C-SmartChain/cratd2cchain/exec"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/node"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discover"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rpc"
 	"github.com/gorilla/websocket"
 )
 
@@ -238,7 +238,7 @@ func (n *ExecNode) Start(snapshots map[string][]byte) (err error) {
 // runs execP2PNode
 func (n *ExecNode) execCommand() *exec.Cmd {
 	return &exec.Cmd{
-		Path: reexec.Self(),
+		Path: "/proc/self/exe",
 		Args: []string{"p2p-node", strings.Join(n.Config.Node.Services, ","), n.ID.String()},
 	}
 }

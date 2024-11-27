@@ -19,10 +19,10 @@ package les
 import (
 	"context"
 
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb"
-	"github.com/XinFinOrg/XDC-Subnet/light"
-	"github.com/XinFinOrg/XDC-Subnet/log"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/light"
+	"github.com/CratD2C-SmartChain/cratd2cchain/log"
 )
 
 // LesOdr implements light.OdrBackend

@@ -20,8 +20,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/ethdb/memorydb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethdb/memorydb"
 )
 
 // makeTestTrie create a sample test trie to test Node-wise reconstruction.

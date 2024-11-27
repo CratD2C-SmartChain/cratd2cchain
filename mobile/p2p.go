@@ -21,7 +21,7 @@ package geth
 import (
 	"errors"
 
-	"github.com/XinFinOrg/XDC-Subnet/p2p"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p"
 )
 
 // NodeInfo represents pi short summary of the information known about the host.

@@ -24,8 +24,8 @@ import (
 	"crypto/elliptic"
 	"fmt"
 
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/secp256k1"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/secp256k1"
 )
 
 // Ecrecover returns the uncompressed public key that created the given signature.

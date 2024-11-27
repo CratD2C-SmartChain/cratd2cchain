@@ -22,14 +22,14 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/XinFinOrg/XDC-Subnet/core/vm/privacy"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/vm/privacy"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/common/math"
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/blake2b"
-	"github.com/XinFinOrg/XDC-Subnet/crypto/bn256"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common/math"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/blake2b"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto/bn256"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 
 	//lint:ignore SA1019 Needed for precompile
 	"golang.org/x/crypto/ripemd160"

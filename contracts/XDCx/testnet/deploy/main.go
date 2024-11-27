@@ -7,11 +7,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/XinFinOrg/XDC-Subnet/accounts/abi/bind"
-	"github.com/XinFinOrg/XDC-Subnet/common"
-	"github.com/XinFinOrg/XDC-Subnet/contracts/XDCx"
-	simulation "github.com/XinFinOrg/XDC-Subnet/contracts/XDCx/testnet"
-	"github.com/XinFinOrg/XDC-Subnet/ethclient"
+	"github.com/CratD2C-SmartChain/cratd2cchain/accounts/abi/bind"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/contracts/XDCx"
+	simulation "github.com/CratD2C-SmartChain/cratd2cchain/contracts/XDCx/testnet"
+	"github.com/CratD2C-SmartChain/cratd2cchain/ethclient"
 )
 
 func main() {

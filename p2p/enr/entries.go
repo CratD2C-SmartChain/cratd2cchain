@@ -22,8 +22,8 @@ import (
 	"io"
 	"net"
 
-	"github.com/XinFinOrg/XDC-Subnet/crypto"
-	"github.com/XinFinOrg/XDC-Subnet/rlp"
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
+	"github.com/CratD2C-SmartChain/cratd2cchain/rlp"
 )
 
 // Entry is implemented by known node record entry types.

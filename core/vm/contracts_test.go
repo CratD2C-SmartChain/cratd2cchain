@@ -23,11 +23,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/XinFinOrg/XDC-Subnet/XDCx/tradingstate"
-	"github.com/XinFinOrg/XDC-Subnet/core/rawdb"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/XDCx/tradingstate"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core/rawdb"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 
-	"github.com/XinFinOrg/XDC-Subnet/common"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 )
 
 // precompiledTest defines the input/output pairs for precompiled contract tests.

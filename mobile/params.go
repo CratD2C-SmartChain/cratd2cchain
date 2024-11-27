@@ -21,9 +21,9 @@ package geth
 import (
 	"encoding/json"
 
-	"github.com/XinFinOrg/XDC-Subnet/core"
-	"github.com/XinFinOrg/XDC-Subnet/p2p/discv5"
-	"github.com/XinFinOrg/XDC-Subnet/params"
+	"github.com/CratD2C-SmartChain/cratd2cchain/core"
+	"github.com/CratD2C-SmartChain/cratd2cchain/p2p/discv5"
+	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 )
 
 // MainnetGenesis returns the JSON spec to use for the main Ethereum network. It
