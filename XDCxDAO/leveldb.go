@@ -172,13 +172,13 @@ func (db *BatchDatabase) Sync() error {
 }
 
 func (db *BatchDatabase) NewIterator(prefix []byte, start []byte) ethdb.Iterator {
-	return db.NewIterator(prefix, start)
+	panic("NewIterator from DAO leveldb is not supported")
 }
 
 func (db *BatchDatabase) Stat(property string) (string, error) {
-	return db.Stat(property)
+	return "", errNotSupported
 }
 
 func (db *BatchDatabase) Compact(start []byte, limit []byte) error {
-	return db.Compact(start, limit)
+	return errNotSupported
 }

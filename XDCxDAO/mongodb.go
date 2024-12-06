@@ -873,15 +873,15 @@ func (db *MongoDatabase) Sync() error {
 }
 
 func (db *MongoDatabase) NewIterator(prefix []byte, start []byte) ethdb.Iterator {
-	return db.NewIterator(prefix, start)
+	panic("NewIterator from DAO leveldb is not supported")
 }
 
 func (db *MongoDatabase) Stat(property string) (string, error) {
-	return db.Stat(property)
+	return "", errNotSupported
 }
 
 func (db *MongoDatabase) Compact(start []byte, limit []byte) error {
-	return db.Compact(start, limit)
+	return errNotSupported
 }
 
 func (db *MongoDatabase) NewBatch() ethdb.Batch {
