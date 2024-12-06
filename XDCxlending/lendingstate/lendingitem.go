@@ -26,6 +26,7 @@ const (
 	LendingStatusCancelled     = "CANCELLED"
 	Market                     = "MO"
 	Limit                      = "LO"
+	MaxLendingExtraDataSize    = 200
 )
 
 var ValidInputLendingStatus = map[string]bool{
@@ -230,6 +231,9 @@ func (l *LendingItem) VerifyLendingItem(state *state.StateDB) error {
 		return fmt.Errorf("VerifyLendingItem: invalid relayer. address: %s", l.Relayer.Hex())
 	}
 	if err := l.VerifyLendingSignature(); err != nil {
+		return err
+	}
+	if err := l.VerifyLendingExtraData(); err != nil {
 		return err
 	}
 	return nil
@@ -459,6 +463,13 @@ func VerifyBalance(isXDCXLendingFork bool, statedb *state.StateDB, lendingStateD
 		}
 	default:
 		return fmt.Errorf("VerifyBalance: unknown lending type")
+	}
+	return nil
+}
+
+func (l *LendingItem) VerifyLendingExtraData() error {
+	if len(l.ExtraData) > MaxLendingExtraDataSize {
+		return fmt.Errorf("VerifyLendingExtraData: invalid lending extraData size. Size: %v", len(l.ExtraData))
 	}
 	return nil
 }
