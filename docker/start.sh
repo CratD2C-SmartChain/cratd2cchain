@@ -84,7 +84,7 @@ else
   echo "No RPC API is enabled. If you wanna enable any API calls, provide values to RPC_API. Available options are admin,db,eth,debug,miner,net,shh,txpool,personal,web3,XDPoS"
 fi
 
-if [ ! -d $DATA_DIR/XDC/keystore ]
+if [ ! -d $DATA_DIR/keystore ]
 then
   if test -z "$PRIVATE_KEY" 
   then

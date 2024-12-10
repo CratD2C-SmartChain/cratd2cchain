@@ -1,4 +1,4 @@
-FROM golang:1.21 as builder
+FROM golang:1.23.3 as builder
 
 RUN apt-get update && apt-get install -y git build-essential
 
@@ -8,7 +8,7 @@ RUN go env -w GOFLAGS="-buildvcs=false"
 RUN cd /builder && make CRAT && make bootnode && make puppeth
 
 # The actual image for subnet containers
-FROM golang:1.21
+FROM golang:1.23.3
 
 RUN apt-get update && apt-get install -y git build-essential
 

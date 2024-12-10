@@ -552,6 +552,9 @@ func Verify(sig *RingSignature, verifyMes bool) bool {
 			//log.Info("H[i][j]", "i", i, "j", j, "x.input", common.Bytes2Hex(rings[i][j].X.Bytes()), "y.input", common.Bytes2Hex(rings[i][j].Y.Bytes()))
 			//log.Info("H[i][j]", "i", i, "j", j, "x", common.Bytes2Hex(hx.Bytes()), "y", common.Bytes2Hex(hy.Bytes()))
 			sx, sy = curve.ScalarMult(hx, hy, S[i][j].Bytes()) // sx, sy = s[i]*H_p(P[i])
+			if px == nil || py == nil || sx == nil || sy == nil {
+				return false
+			}
 			r_x, r_y := curve.Add(sx, sy, px, py)
 			rT := append(PadTo32Bytes(r_x.Bytes()), PadTo32Bytes(r_y.Bytes())...)
 			//log.Info("R[i][j]", "i", i, "j", j, "L", common.Bytes2Hex(rT))
