@@ -375,6 +375,9 @@ func NewLendingTransactionByNonce(signer LendingSigner, txs map[common.Address]L
 	// Initialize a price based heap with the head transactions
 	heads := make(LendingTxByNonce, 0, len(txs))
 	for from, accTxs := range txs {
+		if len(accTxs) == 0 {
+			continue
+		}
 		heads = append(heads, accTxs[0])
 		// Ensure the sender address is from the signer
 		acc, _ := LendingSender(signer, accTxs[0])
