@@ -57,10 +57,24 @@ var (
 	byzantiumInstructionSet        = newByzantiumInstructionSet()
 	constantinopleInstructionSet   = newConstantinopleInstructionSet()
 	istanbulInstructionSet         = newIstanbulInstructionSet()
+	mergeInstructionSet            = newMergeInstructionSet()
 )
 
 // JumpTable contains the EVM opcodes supported at a given fork.
 type JumpTable [256]operation
+
+func newMergeInstructionSet() JumpTable {
+	instructionSet := newIstanbulInstructionSet()
+	instructionSet[PREVRANDAO] = operation{
+		execute:     opRandom,
+		constantGas: GasQuickStep,
+		minStack:    minStack(0, 1),
+		maxStack:    maxStack(0, 1),
+	}
+	enable3198(&instructionSet)
+	enable3855(&instructionSet)
+	return instructionSet
+}
 
 // newIstanbulInstructionSet returns the frontier, homestead
 // byzantium, contantinople and petersburg instructions.

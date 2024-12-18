@@ -24,12 +24,10 @@ import (
 type OpCode byte
 
 // IsPush specifies if an opcode is a PUSH opcode.
+// @deprecated: this method is often used in order to know if there are immediates.
+// Please use `vm.Immediates` instead.
 func (op OpCode) IsPush() bool {
-	switch op {
-	case PUSH0, PUSH1, PUSH2, PUSH3, PUSH4, PUSH5, PUSH6, PUSH7, PUSH8, PUSH9, PUSH10, PUSH11, PUSH12, PUSH13, PUSH14, PUSH15, PUSH16, PUSH17, PUSH18, PUSH19, PUSH20, PUSH21, PUSH22, PUSH23, PUSH24, PUSH25, PUSH26, PUSH27, PUSH28, PUSH29, PUSH30, PUSH31, PUSH32:
-		return true
-	}
-	return false
+	return PUSH0 <= op && op <= PUSH32
 }
 
 // IsStaticJump specifies if an opcode is JUMP.
@@ -100,10 +98,11 @@ const (
 	TIMESTAMP
 	NUMBER
 	DIFFICULTY
-	GASLIMIT
-	CHAINID
-	SELFBALANCE
-	BASEFEE
+	PREVRANDAO  OpCode = 0x44
+	GASLIMIT    OpCode = 0x45
+	CHAINID     OpCode = 0x46
+	SELFBALANCE OpCode = 0x47
+	BASEFEE     OpCode = 0x48
 )
 
 // 0x50 range - 'storage' and execution.

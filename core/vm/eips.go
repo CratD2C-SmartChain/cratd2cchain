@@ -18,8 +18,8 @@ package vm
 
 import (
 	"fmt"
-
 	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	"math/big"
 )
 
 // EnableEIP enables the given EIP on the config.
@@ -27,6 +27,10 @@ import (
 // defined jump tables are not polluted.
 func EnableEIP(eipNum int, jt *JumpTable) error {
 	switch eipNum {
+	case 3855:
+		enable3855(jt)
+	case 3198:
+		enable3198(jt)
 	case 2200:
 		enable2200(jt)
 	case 1884:
@@ -105,9 +109,9 @@ func enable3198(jt *JumpTable) {
 }
 
 // opBaseFee implements BASEFEE opcode
-func opBaseFee(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]byte, error) {
-	baseFee, _ := uint256.FromBig(interpreter.evm.Context.BaseFee)
-	scope.Stack.push(baseFee)
+func opBaseFee(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
+	baseFee := interpreter.evm.Context.BaseFee
+	callContext.stack.push(baseFee)
 	return nil, nil
 }
 
@@ -123,7 +127,7 @@ func enable3855(jt *JumpTable) {
 }
 
 // opPush0 implements the PUSH0 opcode
-func opPush0(pc *uint64, interpreter *EVMInterpreter, scope *ScopeContext) ([]byte, error) {
-	scope.Stack.push(new(uint256.Int))
+func opPush0(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
+	callContext.stack.push(&big.Int{})
 	return nil, nil
 }

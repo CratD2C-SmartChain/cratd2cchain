@@ -610,6 +610,7 @@ type Rules struct {
 	ChainId                                                 *big.Int
 	IsHomestead, IsEIP150, IsEIP155, IsEIP158               bool
 	IsByzantium, IsConstantinople, IsPetersburg, IsIstanbul bool
+	IsMerge                                                 bool
 }
 
 func (c *ChainConfig) Rules(num *big.Int) Rules {
