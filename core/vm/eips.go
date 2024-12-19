@@ -128,6 +128,6 @@ func enable3855(jt *JumpTable) {
 
 // opPush0 implements the PUSH0 opcode
 func opPush0(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
-	callContext.stack.push(&big.Int{})
+	callContext.stack.push(new(big.Int))
 	return nil, nil
 }
