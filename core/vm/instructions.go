@@ -593,6 +593,12 @@ func opDifficulty(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx)
 	return nil, nil
 }
 
+func opRandom(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
+	v := new(big.Int).SetBytes(interpreter.evm.Context.Random.Bytes())
+	callContext.stack.push(v)
+	return nil, nil
+}
+
 func opGasLimit(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
 	callContext.stack.push(math.U256(interpreter.intPool.get().SetUint64(interpreter.evm.GasLimit)))
 	return nil, nil

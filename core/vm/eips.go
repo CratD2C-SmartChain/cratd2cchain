@@ -18,8 +18,8 @@ package vm
 
 import (
 	"fmt"
-
 	"github.com/CratD2C-SmartChain/cratd2cchain/params"
+	"math/big"
 )
 
 // EnableEIP enables the given EIP on the config.
@@ -27,6 +27,10 @@ import (
 // defined jump tables are not polluted.
 func EnableEIP(eipNum int, jt *JumpTable) error {
 	switch eipNum {
+	case 3855:
+		enable3855(jt)
+	case 3198:
+		enable3198(jt)
 	case 2200:
 		enable2200(jt)
 	case 1884:
@@ -90,4 +94,41 @@ func opChainID(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([
 func enable2200(jt *JumpTable) {
 	jt[SLOAD].constantGas = params.SloadGasEIP2200
 	jt[SSTORE].dynamicGas = gasSStoreEIP2200
+}
+
+// enable3198 applies EIP-3198 (BASEFEE Opcode)
+// - Adds an opcode that returns the current block's base fee.
+func enable3198(jt *JumpTable) {
+	// New opcode
+	jt[BASEFEE] = operation{
+		execute:     opBaseFee,
+		constantGas: GasQuickStep,
+		minStack:    minStack(0, 1),
+		maxStack:    maxStack(0, 1),
+	}
+}
+
+// opBaseFee implements BASEFEE opcode
+func opBaseFee(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
+	baseFee := interpreter.evm.Context.BaseFee
+	callContext.stack.push(baseFee)
+	return nil, nil
+}
+
+// enable3855 applies EIP-3855 (PUSH0 opcode)
+func enable3855(jt *JumpTable) {
+	// New opcode
+	jt[PUSH0] = operation{
+		execute:     opPush0,
+		constantGas: GasQuickStep,
+		minStack:    minStack(0, 1),
+		maxStack:    maxStack(0, 1),
+		valid:       true,
+	}
+}
+
+// opPush0 implements the PUSH0 opcode
+func opPush0(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
+	callContext.stack.push(new(big.Int))
+	return nil, nil
 }

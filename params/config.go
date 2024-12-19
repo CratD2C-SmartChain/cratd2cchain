@@ -449,6 +449,16 @@ func (c *ChainConfig) IsIstanbul(num *big.Int) bool {
 	return isForked(common.TIPXDCXCancellationFee, num)
 }
 
+// IsBerlin returns whether num is either equal to the Berlin fork block or greater.
+func (c *ChainConfig) IsBerlin(num *big.Int) bool {
+	return isForked(common.TIPXDCXCancellationFee, num)
+}
+
+// IsLondon returns whether num is either equal to the London fork block or greater.
+func (c *ChainConfig) IsLondon(num *big.Int) bool {
+	return isForked(common.TIPXDCXCancellationFee, num)
+}
+
 func (c *ChainConfig) IsTIP2019(num *big.Int) bool {
 	return isForked(common.TIP2019Block, num)
 }
@@ -610,6 +620,8 @@ type Rules struct {
 	ChainId                                                 *big.Int
 	IsHomestead, IsEIP150, IsEIP155, IsEIP158               bool
 	IsByzantium, IsConstantinople, IsPetersburg, IsIstanbul bool
+	IsBerlin, IsLondon                                      bool
+	IsMerge, IsShanghai                                     bool
 }
 
 func (c *ChainConfig) Rules(num *big.Int) Rules {
@@ -627,5 +639,8 @@ func (c *ChainConfig) Rules(num *big.Int) Rules {
 		IsConstantinople: c.IsConstantinople(num),
 		IsPetersburg:     c.IsPetersburg(num),
 		IsIstanbul:       c.IsIstanbul(num),
+		IsBerlin:         c.IsBerlin(num),
+		IsLondon:         c.IsLondon(num),
+		IsShanghai:       true,
 	}
 }
