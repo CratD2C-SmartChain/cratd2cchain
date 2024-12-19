@@ -43,6 +43,7 @@ type Config struct {
 	Value       *big.Int
 	Debug       bool
 	EVMConfig   vm.Config
+	Random      *common.Hash
 
 	State     *state.StateDB
 	GetHashFn func(n uint64) common.Hash
