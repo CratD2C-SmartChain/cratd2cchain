@@ -594,7 +594,12 @@ func opDifficulty(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx)
 }
 
 func opRandom(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
-	v := new(big.Int).SetBytes(interpreter.evm.Context.Random.Bytes())
+	var v *big.Int
+	if interpreter.evm.Context.Random != nil {
+		v = new(big.Int).SetBytes(interpreter.evm.Context.Random.Bytes())
+	} else {
+		v = new(big.Int).SetBytes(emptyCodeHash.Bytes())
+	}
 	callContext.stack.push(v)
 	return nil, nil
 }

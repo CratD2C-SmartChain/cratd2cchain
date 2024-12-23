@@ -28,7 +28,10 @@ import (
 // NewEVMContext creates a new context for use in the EVM.
 func NewEVMContext(msg Message, header *types.Header, chain consensus.ChainContext, author *common.Address) vm.Context {
 	// If we don't have an explicit author (i.e. not mining), extract from the header
-	var beneficiary common.Address
+	var (
+		beneficiary common.Address
+		random      common.Hash
+	)
 	if author == nil {
 		beneficiary, _ = chain.Engine().Author(header) // Ignore error, we're past header validation
 	} else {
@@ -45,6 +48,7 @@ func NewEVMContext(msg Message, header *types.Header, chain consensus.ChainConte
 		Difficulty:  new(big.Int).Set(header.Difficulty),
 		GasLimit:    header.GasLimit,
 		GasPrice:    new(big.Int).Set(msg.GasPrice()),
+		Random:      &random,
 	}
 }
 

@@ -55,6 +55,7 @@ var RelayerLendingFee = big.NewInt(10000000000000000)                 // 0.01
 var RelayerLendingCancelFee = big.NewInt(1000000000000000)            // 0.001
 var BaseLendingInterest = big.NewInt(100000000)                       // 1e8
 
+var MinGasPrice50x = big.NewInt(12500000000)
 var MinGasPrice = big.NewInt(DefaultMinGasPrice)
 var RelayerRegistrationSMC = "0x16c63b79f9C8784168103C0b74E6A59EC2de4a02"
 var RelayerRegistrationSMCTestnet = "0xA1996F69f47ba14Cb7f661010A7C31974277958c"
