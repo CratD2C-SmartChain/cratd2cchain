@@ -17,6 +17,7 @@
 package core
 
 import (
+	"github.com/CratD2C-SmartChain/cratd2cchain/crypto"
 	"math/big"
 
 	"github.com/CratD2C-SmartChain/cratd2cchain/common"
@@ -37,6 +38,8 @@ func NewEVMContext(msg Message, header *types.Header, chain consensus.ChainConte
 	} else {
 		beneficiary = *author
 	}
+	// since xdpos chain do not use difficulty and mixdigest, we use hash of the block number as random
+	random = crypto.Keccak256Hash(header.Number.Bytes())
 	return vm.Context{
 		CanTransfer: CanTransfer,
 		Transfer:    Transfer,
