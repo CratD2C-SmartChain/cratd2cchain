@@ -124,7 +124,6 @@ func enable3855(jt *JumpTable) {
 		constantGas: GasQuickStep,
 		minStack:    minStack(0, 1),
 		maxStack:    maxStack(0, 1),
-		valid:       true,
 	}
 }
 
