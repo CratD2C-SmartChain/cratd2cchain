@@ -18,6 +18,7 @@ package vm
 
 import (
 	"fmt"
+	"github.com/CratD2C-SmartChain/cratd2cchain/common"
 	"github.com/CratD2C-SmartChain/cratd2cchain/params"
 	"math/big"
 )
@@ -110,7 +111,7 @@ func enable3198(jt *JumpTable) {
 
 // opBaseFee implements BASEFEE opcode
 func opBaseFee(pc *uint64, interpreter *EVMInterpreter, callContext *callCtx) ([]byte, error) {
-	baseFee := interpreter.evm.Context.BaseFee
+	baseFee := common.MinGasPrice50x
 	callContext.stack.push(baseFee)
 	return nil, nil
 }
@@ -123,7 +124,6 @@ func enable3855(jt *JumpTable) {
 		constantGas: GasQuickStep,
 		minStack:    minStack(0, 1),
 		maxStack:    maxStack(0, 1),
-		valid:       true,
 	}
 }
 

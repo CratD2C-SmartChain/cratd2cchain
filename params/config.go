@@ -451,12 +451,23 @@ func (c *ChainConfig) IsIstanbul(num *big.Int) bool {
 
 // IsBerlin returns whether num is either equal to the Berlin fork block or greater.
 func (c *ChainConfig) IsBerlin(num *big.Int) bool {
-	return isForked(common.TIPXDCXCancellationFee, num)
+	return isForked(common.BerlinBlock, num)
 }
 
 // IsLondon returns whether num is either equal to the London fork block or greater.
 func (c *ChainConfig) IsLondon(num *big.Int) bool {
-	return isForked(common.TIPXDCXCancellationFee, num)
+	return isForked(common.LondonBlock, num)
+}
+
+// IsMerge returns whether num is either equal to the Merge fork block or greater.
+// Different from Geth which uses `block.difficulty != nil`
+func (c *ChainConfig) IsMerge(num *big.Int) bool {
+	return isForked(common.MergeBlock, num)
+}
+
+// IsShanghai returns whether num is either equal to the Shanghai fork block or greater.
+func (c *ChainConfig) IsShanghai(num *big.Int) bool {
+	return isForked(common.ShanghaiBlock, num)
 }
 
 func (c *ChainConfig) IsTIP2019(num *big.Int) bool {
@@ -641,6 +652,7 @@ func (c *ChainConfig) Rules(num *big.Int) Rules {
 		IsIstanbul:       c.IsIstanbul(num),
 		IsBerlin:         c.IsBerlin(num),
 		IsLondon:         c.IsLondon(num),
-		IsShanghai:       true,
+		IsMerge:          c.IsMerge(num),
+		IsShanghai:       c.IsShanghai(num),
 	}
 }
