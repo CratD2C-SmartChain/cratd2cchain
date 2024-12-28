@@ -386,12 +386,6 @@ func (b *SimulatedBackend) callContract(ctx context.Context, call XDPoSChain.Cal
 		}
 	}
 	evmContext := core.NewEVMContext(msg, block.Header(), b.blockchain, nil)
-	// Create a new environment which holds all relevant information
-	// about the transaction and calling mechanisms.
-	// If currentBaseFee is defined, add it to the vmContext.
-	if evmContext.BaseFee != nil {
-		evmContext.BaseFee = new(big.Int).Set(evmContext.BaseFee)
-	}
 
 	vmenv := vm.NewEVM(evmContext, statedb, nil, b.config, vm.Config{})
 	gaspool := new(core.GasPool).AddGas(math.MaxUint64)

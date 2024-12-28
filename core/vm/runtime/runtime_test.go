@@ -356,6 +356,31 @@ func BenchmarkEVM_SWAP1(b *testing.B) {
 	})
 }
 
+func BenchmarkEVM_BASEFEE1(b *testing.B) {
+	baseFeeContractCode := []byte{
+		byte(vm.BASEFEE),
+		byte(vm.PUSH1), 0,
+		byte(vm.MSTORE),
+		byte(vm.PUSH1), 32,
+		byte(vm.PUSH1), 0,
+		byte(vm.RETURN),
+	}
+	db := rawdb.NewMemoryDatabase()
+	state, _ := state.New(types.EmptyRootHash, state.NewDatabase(db))
+	contractAddr := common.BytesToAddress([]byte("contract"))
+
+	b.Run("BASEFEE TEST", func(b *testing.B) {
+		state.SetCode(contractAddr, baseFeeContractCode)
+
+		for i := 0; i < b.N; i++ {
+			_, _, err := Call(contractAddr, []byte{}, &Config{State: state})
+			if err != nil {
+				b.Fatal(err)
+			}
+		}
+	})
+}
+
 // BenchmarkSimpleLoop test a pretty simple loop which loops
 // 1M (1 048 575) times.
 // Takes about 200 ms
