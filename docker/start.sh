@@ -77,34 +77,49 @@ else
 fi
 
 # RPC API
-if [[ ! -z $RPC_API ]]; then
-  echo "Open rpc API of ${RPC_API}"
-  params="$params --rpcapi ${RPC_API} --wsapi ${RPC_API}"
-else
-  echo "No RPC API is enabled. If you wanna enable any API calls, provide values to RPC_API. Available options are admin,db,eth,debug,miner,net,shh,txpool,personal,web3,XDPoS"
-fi
-
 if [ ! -d $DATA_DIR/keystore ]
 then
-  if test -z "$PRIVATE_KEY" 
+  if test -z "$PRIVATE_KEY"
   then
     echo "PRIVATE_KEY environment variable has not been set, randomly creating a new one"
-    CRAT account new \
-      --datadir $DATA_DIR \
-      --keystore $KEYSTORE_DIR \
-      --password .pwd
+
+    wallet=$(CRAT --datadir $DATA_DIR account new \
+      --password /work/.pwd 2>&1 | grep -oE '0x[a-fA-F0-9]{40}' | head -n1)
+
+    if [ -z "$wallet" ]; then
+      echo "ERROR: Failed to create new account!"
+      exit 1
+    fi
+
+    echo "Created new wallet: $wallet"
+
     CRAT --datadir $DATA_DIR init /work/genesis.json
-    wallet=$(CRAT account list --datadir $DATA_DIR --keystore $KEYSTORE_DIR | head -n 1 | awk -v FS="({|})" '{print $2}')
+
   else
     echo "${PRIVATE_KEY}" > ./private_key
     echo "Creating account from private key"
-    wallet=$(CRAT account import --password .pwd --datadir $DATA_DIR ./private_key | awk -v FS="({|})" '{print $2}')
+
+    wallet=$(CRAT --datadir $DATA_DIR account import \
+      --password /work/.pwd \
+      ./private_key 2>&1 | awk -v FS="({|})" '{print $2}')
+
+    if [ -z "$wallet" ]; then
+      echo "ERROR: Failed to import account!"
+      exit 1
+    fi
+
     CRAT --datadir $DATA_DIR init /work/genesis.json
+    rm -f ./private_key
   fi
 else
   echo "Wallet already exist, re-use the same one"
-  wallet=$(CRAT account list --datadir $DATA_DIR | head -n 1 | awk -v FS="({|})" '{print $2}')
+  wallet=$(CRAT --datadir $DATA_DIR account list | head -n 1 | awk -v FS="({|})" '{print $2}')
 fi
+
+
+
+echo "Using wallet: $wallet"
+
 
 
 # Stats server
@@ -139,11 +154,10 @@ CRAT $params \
 --datadir $DATA_DIR \
 --rpc \
 --rpccorsdomain "*" \
---rpcaddr 0.0.0.0 \
+--rpcaddr 127.0.0.1 \
 --rpcvhosts "*" \
 --password /work/.pwd \
 --gasprice "1" \
 --targetgaslimit "420000000" \
---ws --wsaddr=0.0.0.0 \
---mine \
+--ws --wsaddr=127.0.0.1 \
 --wsorigins "*" 2>&1 >>$DATA_DIR/cratd2c.log | tee --append $DATA_DIR/cratd2c.log

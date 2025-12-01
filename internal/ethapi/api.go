@@ -518,6 +518,10 @@ func (s *PublicBlockChainAPI) BlockNumber() hexutil.Uint64 {
 	return hexutil.Uint64(header.Number.Uint64())
 }
 
+func (s *PublicBlockChainAPI) ForkVersion() hexutil.Uint64 {
+	return hexutil.Uint64(2)
+}
+
 // BlockNumber returns the block number of the chain head.
 func (s *PublicBlockChainAPI) GetRewardByHash(hash common.Hash) map[string]map[string]map[string]*big.Int {
 	return s.b.GetRewardByHash(hash)
